@@ -1,4 +1,4 @@
-import { FadeIn, GoldDivider, Rule, CheckIcon, XIcon, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_MILKY, TentIcon, CompassIcon, UsersIcon, UtensilsIcon } from '../components/shared'
+import { FadeIn, GoldDivider, Rule, CheckIcon, XIcon, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_WHATS_INCLUDED_HERO, TentIcon, CompassIcon, UsersIcon, UtensilsIcon } from '../components/shared'
 
 import type { ReactNode } from 'react'
 
@@ -36,7 +36,8 @@ export default function WhatsIncluded() {
         eyebrow="Expedition Inclusions &amp; Logistics"
         title="What's Included"
         subtitle="A comprehensive breakdown of all accommodations, permits, safaris, private transportation, and expert coaching included in the expedition."
-        bg={IMG_MILKY}
+        bg={IMG_WHATS_INCLUDED_HERO}
+        bgPos="center center"
       />
 
       <GoldDivider />

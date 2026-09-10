@@ -1,4 +1,4 @@
-import { FadeIn, GoldDivider, Rule, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_MILKY, IMG_TIGER2, IMG_TIGER3 } from '../components/shared'
+import { FadeIn, GoldDivider, Rule, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_DESTINATIONS_HERO, IMG_TIGER2, IMG_TIGER3 } from '../components/shared'
 
 const PENCH_THEMES = [
   'Milky Way landscapes and star-field compositions',
@@ -39,7 +39,8 @@ export default function Destinations() {
         eyebrow="Two Iconic Destinations"
         title="Pench &amp; Tadoba-Andhari"
         subtitle="Two extraordinary reserves in central India: dark-sky astrophotography and Bengal tiger wildlife photography."
-        bg={IMG_MILKY}
+        bg={IMG_DESTINATIONS_HERO}
+        bgPos="center 30%"
       />
 
       <GoldDivider />

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FadeIn, GoldDivider, Rule, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_MILKY } from '../components/shared'
+import { FadeIn, GoldDivider, Rule, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_ITINERARY_HERO } from '../components/shared'
 
 const DAYS = [
   {
@@ -128,7 +128,8 @@ export default function Itinerary() {
         eyebrow="April 5 – 14, 2027 · 9 Nights / 10 Days"
         title="Day-by-Day Itinerary"
         subtitle="The itinerary is flexible to ensure the best photography and viewing conditions for both astro- and wildlife photography. April is the driest part of the year in central India, giving us the best odds of clear skies throughout your stay."
-        bg={IMG_MILKY}
+        bg={IMG_ITINERARY_HERO}
+        bgPos="center center"
       />
 
       <GoldDivider />

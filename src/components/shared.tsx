@@ -8,10 +8,23 @@ import { IMG_KAIOTIX_LOGO } from '../assets/kaiotixData'
 import { IMG_INSTRUCTORS_HERO } from '../assets/instructorsHeroData'
 import { IMG_PRICING_HERO } from '../assets/pricingHeroData'
 import { IMG_FAQ_HERO } from '../assets/faqHeroData'
+import { IMG_ITINERARY_HERO } from '../assets/itineraryHeroData'
+import { IMG_DESTINATIONS_HERO } from '../assets/destinationsHeroData'
+import { IMG_WHATS_INCLUDED_HERO } from '../assets/whatsIncludedHeroData'
 import TermsModal from './TermsModal'
 
 // ── Images ───────────────────────────────────────────────────────────────────
-export { IMG_HERO, IMG_DARK_SKY, IMG_TIGER_FOCUS, IMG_INSTRUCTORS_HERO, IMG_PRICING_HERO, IMG_FAQ_HERO }
+export { 
+  IMG_HERO, 
+  IMG_DARK_SKY, 
+  IMG_TIGER_FOCUS, 
+  IMG_INSTRUCTORS_HERO, 
+  IMG_PRICING_HERO, 
+  IMG_FAQ_HERO,
+  IMG_ITINERARY_HERO,
+  IMG_DESTINATIONS_HERO,
+  IMG_WHATS_INCLUDED_HERO
+}
 export const IMG_MILKY = IMG_DARK_SKY
 export const IMG_TIGER1 = IMG_PRICING_HERO
 export const IMG_TIGER2 = IMG_FAQ_HERO
