@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import logoImg from '../assets/logo.jpg'
-import heroImg from '../assets/hero.jpg'
+import { IMG_HERO } from '../assets/heroData'
 import { IMG_KAIOTIX_LOGO } from '../assets/kaiotixData'
 import TermsModal from './TermsModal'
 
 // ── Images ───────────────────────────────────────────────────────────────────
-export const IMG_HERO = heroImg
+export { IMG_HERO }
 export const IMG_MILKY = 'https://images.unsplash.com/photo-1519681894595-7fc78e06f2d7?w=1600&h=900&fit=crop&auto=format'
 export const IMG_TIGER1 = 'https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?w=900&h=700&fit=crop&auto=format'
 export const IMG_TIGER2 = 'https://images.unsplash.com/photo-1680140979890-101e2798dddf?w=900&h=700&fit=crop&auto=format'
