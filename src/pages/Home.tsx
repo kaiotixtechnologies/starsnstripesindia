@@ -291,7 +291,7 @@ export default function Home() {
 
               <div className="mt-2 p-4 rounded-sm bg-white/70 border border-[#A07828]/20">
                 <p className="text-xs font-semibold italic" style={{ color: '#7A5C1E' }}>
-                  Note: Tadoba sits at low elevation, so there is no concern about altitude sickness on this trip.
+                  Note: Pench and Tadoba both sit at low elevations, so there is no concern about altitude sickness on this trip.
                 </p>
               </div>
             </div>

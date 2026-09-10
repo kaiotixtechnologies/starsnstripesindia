@@ -5,7 +5,7 @@ const PENCH_THEMES = [
   'Night-sky storytelling with foreground trees, watchtowers, and silhouettes',
   'Night photography workflow, including focus, long exposure, deep-sky imagery, and star tracker photography (for guests who would like to use star trackers)',
   'Daylight wildlife and habitat photography: tiger, leopard, Indian gaur (bison), sloth bear, dhole (Indian wild dog), sambar, and chital (spotted deer).',
-  'Pench Tiger Reserve also hosts over 300 bird species, characterized by a diverse mix of central Indian forest residents, apex raptors, and summer breeders including the Stork-billed Kingfisher, Greater Racket-tailed Drongo, White-rumped Vulture, Indian Golden Oriole, Jungle Owlet, Plum-headed Parakeet, and the rare Brown Fish Owl along its signature river banks.',
+  'Pench Tiger Reserve also hosts over 250 bird species, characterized by a diverse mix of central Indian forest residents, apex raptors, and summer breeders including the Stork-billed Kingfisher, Greater Racket-tailed Drongo, White-rumped Vulture, Indian Golden Oriole, Jungle Owlet, Plum-headed Parakeet, and the rare Brown Fish Owl along its signature river banks.',
   'April is the best season for animal and bird encounters due to the dry conditions, especially around water sources and in open habitat at dawn and dusk.',
 ]
 
@@ -90,7 +90,7 @@ export default function Destinations() {
             </h2>
 
             <p className="text-base leading-relaxed mb-4" style={{ color: '#3D4F60' }}>
-              Tadoba-Andhari is widely recognized by wildlife photography operators as one of the best destinations in India for Bengal tiger safaris, with strong additional chances for leopard, dhole (Indian wild dog), sloth bear, and Indian gaur. Tadoba-Andhari Tiger Reserve is also home to up to 250 bird species, featuring a dense concentration of wetland birds, waterfowl, and vibrant forest species that cluster around its prominent permanent lakes during the dry season including the Oriental Darter, Black-naped Monarch, Tickell's Blue Flycatcher, Pheasant-tailed Jacana, Black-hooded Oriole, Crested Treeswift, and the endangered Lesser Adjutant Stork around its deep woodland lakes. April is the best season for animal and bird encounters due to the dry conditions, especially around water sources and in open habitat at dawn and dusk.
+              Tadoba-Andhari is widely recognized by wildlife photography operators as one of the best destinations in India for Bengal tiger safaris, with strong additional chances for leopard, dhole (Indian wild dog), sloth bear, and Indian gaur. Tadoba-Andhari Tiger Reserve is also home to over 200 bird species, featuring a dense concentration of wetland birds, waterfowl, and vibrant forest species that cluster around its prominent permanent lakes during the dry season including the Oriental Darter, Black-naped Monarch, Tickell's Blue Flycatcher, Pheasant-tailed Jacana, Black-hooded Oriole, Crested Treeswift, and the endangered Lesser Adjutant Stork around its deep woodland lakes. April is the best season for animal and bird encounters due to the dry conditions, especially around water sources and in open habitat at dawn and dusk.
             </p>
 
             <p className="text-sm font-semibold leading-relaxed mb-8" style={{ color: '#1A5030' }}>

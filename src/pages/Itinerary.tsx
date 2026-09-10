@@ -10,7 +10,7 @@ const DAYS = [
     content: (
       <>
         <p className="mb-3">
-          Arrive at Nagpur Airport (NAG) by 9:30 AM or earlier (we can arrange room(s) at the Radisson Blu Hotel, 2 miles from Nagpur airport, at an extra charge, if you plan to arrive the previous day). We'll meet the group in the lobby of the Radisson Blu post breakfast at 1000 AM and drive roughly 2.5–3 hours to our jungle lodge on the edge of Pench Tiger Reserve. Lunch is served on arrival at the lodge. After settling in, we will hold a welcome briefing and full gear review — camera settings, lens choice for wildlife vs. astro, and a look at the week's weather and moon phase. First group dinner in the evening.
+          Arrive at Nagpur Airport (NAG) by 9:30 AM or earlier (we can arrange room(s) at the Radisson Blu Hotel, 2 miles from Nagpur airport, at an extra charge, if you plan to arrive the previous day). We'll meet the group in the lobby of the Radisson Blu at 10:00 AM and drive roughly 2.5–3 hours to our jungle lodge on the edge of Pench Tiger Reserve. Lunch is served on arrival at the lodge. After settling in, we will hold a welcome briefing and full gear review — camera settings, lens choice for wildlife vs. astro, and a look at the week's weather and moon phase. First group dinner in the evening.
         </p>
         <p>
           First astrophotography session at night, led by Abhishek Pawse, at the lodge's dedicated astrophotography space, a short walk away.
