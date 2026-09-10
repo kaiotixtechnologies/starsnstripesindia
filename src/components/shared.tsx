@@ -5,7 +5,7 @@ import { IMG_KAIOTIX_LOGO } from '../assets/kaiotixData'
 import TermsModal from './TermsModal'
 
 // ── Images ───────────────────────────────────────────────────────────────────
-export const IMG_HERO = 'https://images.unsplash.com/photo-1592636120953-3d2b28ebfd69?w=1800&h=1000&fit=crop&auto=format'
+export const IMG_HERO = '/hero.jpg'
 export const IMG_MILKY = 'https://images.unsplash.com/photo-1519681894595-7fc78e06f2d7?w=1600&h=900&fit=crop&auto=format'
 export const IMG_TIGER1 = 'https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?w=900&h=700&fit=crop&auto=format'
 export const IMG_TIGER2 = 'https://images.unsplash.com/photo-1680140979890-101e2798dddf?w=900&h=700&fit=crop&auto=format'
