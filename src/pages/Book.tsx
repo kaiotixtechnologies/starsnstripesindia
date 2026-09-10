@@ -31,7 +31,7 @@ export interface ReservationFormData {
  * Google Apps Script Web App
  */
 const APPS_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzIkYg2gk04CKIp2DwXLaoxVlD4-rYwOJAJUfeI8lSWqHFJRNucwAKvWQSOh-vIYEFIGQ/exec'
+  'https://script.google.com/macros/s/AKfycbz0JZPtComaN1fR-NtWfzMsdRoFoY97_Mb7P5GSeVBYHc2_us9quADTCvywWZiHwf6P_A/exec'
 
 export default function Book() {
   const [formData, setFormData] = useState<ReservationFormData>({
@@ -285,7 +285,7 @@ export default function Book() {
       if (!response.ok || !result.success) {
         throw new Error(
           result.message ||
-            'Unable to submit your reservation. Please try again.'
+          'Unable to submit your reservation. Please try again.'
         )
       }
 
@@ -683,8 +683,8 @@ export default function Book() {
                       <div
                         key={idx}
                         className={`p-5 sm:p-6 rounded-sm transition-all ${isPrimary
-                            ? 'bg-[#FAFAF7] border-l-4 border-l-[#A07828] border border-black/[0.08]'
-                            : 'bg-[#FCFCFA] border border-black/[0.08]'
+                          ? 'bg-[#FAFAF7] border-l-4 border-l-[#A07828] border border-black/[0.08]'
+                          : 'bg-[#FCFCFA] border border-black/[0.08]'
                           }`}
                       >
 
