@@ -32,7 +32,7 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: 'What are the accommodations like in Pench and Tadoba?',
-        a: 'Guests stay in luxury jungle lodges: Saj in the Forest (a boutique resort set across 32 acres near Pench’s Turia Gate) for Nights 1–4, and Tathastu Tadoba (The Tiger Village Resort near Moharli Gate) for Nights 5–9. All accommodations are twin-share in airconditioned rooms with private en-suite bathrooms. Single occupancy upgrades are available for $1,500 USD per person.'
+        a: 'Guests stay in luxury jungle lodges: Saj in the Forest (a boutique resort set across 32 acres near Pench’s Turia Gate) for Nights 1–4, and Tathastu Tadoba (The Tiger Village Resort near Moharli Gate) for Nights 5–9. All accommodations are twin-share in airconditioned rooms with private en-suite bathrooms. Single occupancy upgrades are available at an extra charge, subject to lodge availability.'
       },
       {
         q: 'What vehicles are used for safaris and road transfers?',
@@ -49,7 +49,7 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: 'How many safaris and dark-sky sessions are included?',
-        a: 'The tour includes 9 safaris totaling 52 hours of dedicated field time: 3 afternoon safaris in Pench (4 hours each), 4 half-day safaris in Tadoba (4 hours each), and 2 full-day 12-hour safaris in Tadoba (April 11 & 13) with packed lunches in the park. In addition, there are 4 dedicated dark-sky astrophotography sessions (4–5 hours each) in Pench.'
+        a: 'The tour includes 9 safaris totaling 52 hours of dedicated field time: 7 half-day safaris (four hours each, 3 safaris in Pench, 4 safaris in Tadoba, 2 photographers per jeep) and 2 full-day 12-hour safaris (max. 3 photographers per jeep) in Tadoba (April 11 & 13) with packed lunches in the park. In addition, there are 4 dedicated dark-sky astrophotography sessions (4–5 hours each) in Pench.'
       },
       {
         q: 'Why are April and new moon chosen for this tour?',
@@ -70,7 +70,7 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: 'What is the price and payment schedule?',
-        a: 'The price is $6,900 USD per person (double occupancy). A deposit of $2,000 USD is required upon booking to secure your spot. The remaining balance of $4,900 USD is due by October 15, 2026. Single room upgrades are $1,500 USD per person, subject to lodge availability.'
+        a: 'The price is $6,900 USD per person (double occupancy). A deposit of $2,000 USD is required upon booking to secure your spot. The remaining balance of $4,900 USD is due by October 15, 2026. Single room upgrades are available at an extra charge, subject to lodge availability.'
       },
       {
         q: 'What is the cancellation and refund policy?',

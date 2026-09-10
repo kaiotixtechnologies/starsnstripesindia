@@ -148,7 +148,7 @@ export default function TermsModal({
                 <h2 className="font-serif text-lg font-bold text-[#0D1B2A] mb-3">3. Booking and Payment</h2>
                 <ul className="space-y-2 pl-2">
                   <li><strong>3.1</strong> A booking is confirmed on receipt of a non-refundable deposit of $2,000 USD per person.</li>
-                  <li><strong>3.2</strong> The remaining balance ($4,900 USD per person, double occupancy; add $1,500 USD for single occupancy) is due by October 15, 2026.</li>
+                  <li><strong>3.2</strong> The remaining balance ($4,900 USD per person, double occupancy; plus extra charge for single occupancy) is due by October 15, 2026.</li>
                   <li><strong>3.3</strong> Bookings made after October 15, 2026, where space permits, require full payment at the time of booking.</li>
                   <li><strong>3.4</strong> All payments are made in US Dollars by bank transfer to the account details provided at booking. Payment is made to P S Srinivas as an individual, in his capacity as trip organizer, and not to a corporate entity.</li>
                   <li><strong>3.5</strong> Failure to pay the balance by the due date may, at the Organizer's discretion, result in cancellation of the booking and forfeiture of the deposit.</li>

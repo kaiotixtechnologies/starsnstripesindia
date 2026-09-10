@@ -1,23 +1,33 @@
 import { Link } from 'react-router-dom'
 import { FadeIn, GoldDivider, Rule, CheckIcon, XIcon, Eyebrow, GoldBtn, OutlineBtn, IMG_HERO, IMG_MILKY, IMG_TIGER1, IMG_TIGER2, IMG_STARS } from '../components/shared'
 
-const WHY_TOUR_STANDS_OUT = [
+import type { ReactNode } from 'react'
+
+const WHY_TOUR_STANDS_OUT: ReactNode[] = [
   'Two genres in one trip: astrophotography and wildlife photography.',
   'A rare dark-sky setting inside a tiger reserve at Pench.',
   'April 6, 2027 is new moon, guaranteeing the darkest possible skies for our four nights of astrophotography — timed to central India\'s dry season, historically the most reliable window for clear night skies, with the full Milky Way, including the galactic core, visible for over five hours each night.',
   'Prime dry-season timing for tiger photography in central India, when sightings around water and open habitat are at their best.',
   'Small-group access: two co-directors present throughout the trip, joined by a specialist astrophotography expert for four nights in Pench — never more than 8 guests total.',
-  '7 Half day safaris (four hours each, 3 safaris in Pench, 4 safaris in Tadoba ) and 2 Full Day 12-hour safaris in Tadoba totaling 52 hours of dedicated safari time, plus four dark-sky sessions (4-5 hours each) in Pench.',
+  (
+    <span>
+      7 half-day safaris (four hours each, 3 safaris in Pench, 4 safaris in Tadoba, <strong>2 photographers per jeep</strong>) and 2 full-day 12-hour safaris (<strong>max. 3 photographers per jeep</strong>) in Tadoba totaling 52 hours of dedicated safari time, plus four dark-sky sessions (4-5 hours each) in Pench.
+    </span>
+  ),
   'A mix of full-day and half-day safaris in Tadoba — the same format used by leading international tiger-photography operators — designed to maximize both the volume and the diversity of sightings.',
   'Wildlife guidance from Himanshu Bagde, who has photographed over 700 individual tigers across more than two decades and tracks individual tigers by name and territory across Pench and Tadoba.',
   'Four nights of expert astrophotography guidance in Pench from Abhishek Pawse, the DarkSky International advocate whose work helped bring Pench its Dark Sky Park designation.',
   'Co-direction, astrophotography coaching, and Lightroom/Photoshop post-processing guidance throughout from P S Srinivas (“Srini”).',
 ]
 
-const WHATS_INCLUDED = [
+const WHATS_INCLUDED: ReactNode[] = [
   'Airport pick-up and drop-off at Nagpur (NAG)',
   'All transportation throughout the programme in private 4x4 Innova vehicles, plus dedicated safari vehicles',
-  'All safari jeep and park permit fees for Pench and Tadoba-Andhari, core and buffer zones (7 Half day and 2 Full day safaris)',
+  (
+    <span>
+      All safari jeep and park permit fees for Pench and Tadoba-Andhari, core and buffer zones (7 half-day safaris (<strong>2 photographers per jeep</strong>) and 2 full-day safaris (<strong>max. 3 photographers per jeep</strong>))
+    </span>
+  ),
   'Twin-share accommodation at Saj in the Forest Resort (Pench) and Tathastu Resort (Tadoba), each airconditioned room with a private bathroom',
   'All meals (breakfast, lunch, and dinner) throughout the stay',
   'Hot beverages and snacks on all safaris; packed lunches in the park on our two full-day Tadoba safaris (April 11 AND 13)',
@@ -30,7 +40,7 @@ const WHATS_INCLUDED = [
 
 const WHATS_NOT_INCLUDED = [
   'Flights to/from Nagpur Airport',
-  'Single room upgrade — $1,500 per person, subject to availability',
+  'Single room upgrade — at an extra charge, subject to availability',
   'Visa fees',
   'Health/travel insurance (strongly recommended — see booking terms)',
   'Camera gear rental (e.g., star tracker, telephoto lens)',

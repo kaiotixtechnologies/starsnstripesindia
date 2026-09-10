@@ -1,9 +1,15 @@
 import { FadeIn, GoldDivider, Rule, CheckIcon, XIcon, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_MILKY, TentIcon, CompassIcon, UsersIcon, UtensilsIcon } from '../components/shared'
 
-const WHATS_INCLUDED = [
+import type { ReactNode } from 'react'
+
+const WHATS_INCLUDED: ReactNode[] = [
   'Airport pick-up and drop-off at Nagpur (NAG)',
   'All transportation throughout the programme in private 4x4 Innova vehicles, plus dedicated safari vehicles',
-  'All safari jeep and park permit fees for Pench and Tadoba-Andhari, core and buffer zones (7 Half day and 2 Full day safaris)',
+  (
+    <span>
+      All safari jeep and park permit fees for Pench and Tadoba-Andhari, core and buffer zones (7 half-day safaris (<strong>2 photographers per jeep</strong>) and 2 full-day safaris (<strong>max. 3 photographers per jeep</strong>))
+    </span>
+  ),
   'Twin-share accommodation at Saj in the Forest Resort (Pench) and Tathastu Resort (Tadoba), each airconditioned room with a private bathroom',
   'All meals (breakfast, lunch, and dinner) throughout the stay',
   'Hot beverages and snacks on all safaris; packed lunches in the park on our two full-day Tadoba safaris (April 11 AND 13)',
@@ -16,7 +22,7 @@ const WHATS_INCLUDED = [
 
 const WHATS_NOT_INCLUDED = [
   'Flights to/from Nagpur Airport',
-  'Single room upgrade — $1,500 per person, subject to availability',
+  'Single room upgrade — at an extra charge, subject to availability',
   'Visa fees',
   'Health/travel insurance (strongly recommended — see booking terms)',
   'Camera gear rental (e.g., star tracker, telephoto lens)',
@@ -90,7 +96,7 @@ export default function WhatsIncluded() {
 
             <div className="p-8 md:p-10 rounded-sm bg-[#F2EDE2] mb-10" style={{ border: '1px solid rgba(13,27,42,0.08)' }}>
               <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#0D1B2A' }}>
-                Accommodation is in twin-share airconditioned rooms, each room with a private bathroom, at jungle lodges close to the reserve gates. Single occupancy is available on request for an additional $1,500 per person, subject to availability.
+                Accommodation is in twin-share airconditioned rooms, each room with a private bathroom, at jungle lodges close to the reserve gates. Single occupancy is available on request at an extra charge, subject to availability.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">

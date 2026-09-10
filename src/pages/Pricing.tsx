@@ -4,10 +4,16 @@ import { FadeIn, GoldDivider, Rule, CheckIcon, XIcon, Eyebrow, GoldBtn, OutlineB
 import PaymentModal from '../components/PaymentModal'
 import TermsModal from '../components/TermsModal'
 
-const INCLUDED_SUMMARY = [
+import type { ReactNode } from 'react'
+
+const INCLUDED_SUMMARY: ReactNode[] = [
   'Nagpur (NAG) airport pick-up and drop-off',
   'Private 4x4 Innova road transfers and dedicated safari vehicles',
-  'All safari jeep and park permit fees for Pench & Tadoba-Andhari (9 safaris total)',
+  (
+    <span>
+      All safari jeep and park permit fees for Pench &amp; Tadoba-Andhari: 7 half-day safaris (<strong>2 photographers per jeep</strong>) and 2 full-day safaris (<strong>max. 3 photographers per jeep</strong>)
+    </span>
+  ),
   'Twin-share luxury jungle lodge accommodations with private en-suite bathrooms',
   'All meals (breakfast, lunch, and dinner) throughout the stay',
   'Four dedicated astrophotography sessions in Pench (India’s first Dark Sky Park)',
@@ -18,7 +24,7 @@ const INCLUDED_SUMMARY = [
 
 const NOT_INCLUDED_SUMMARY = [
   'Flights to/from Nagpur Airport (NAG)',
-  'Single room upgrade — USD 1,500 per person, subject to availability',
+  'Single room upgrade — at an extra charge, subject to availability',
   'Visa fees (Indian e-Visa)',
   'Health and travel insurance (strongly recommended)',
   'Camera gear rental (star tracker, telephoto lens)',
@@ -110,7 +116,7 @@ export default function Pricing() {
                   </p>
                 )}
                 <p className="text-white/60 text-xs mt-2">
-                  Single room upgrade: USD 1,500 per person, subject to availability.
+                  Single room upgrade: at an extra charge, subject to availability.
                 </p>
               </div>
 
@@ -204,7 +210,7 @@ export default function Pricing() {
                   A USD 2,000 deposit reserves your spot; the remaining balance is due by October 15, 2026.
                 </p>
                 <p className="text-xs text-[#637282]">
-                  Total tour price: USD 6,900 per person (double occupancy). Single room upgrade: USD 1,500.
+                  Total tour price: USD 6,900 per person (double occupancy). Single room upgrade: at an extra charge, subject to availability.
                 </p>
               </div>
 
@@ -271,11 +277,10 @@ export default function Pricing() {
         amountUSD={payAmount}
       />
 
-      {/* Terms & Conditions PDF Modal */}
+      {/* Terms & Conditions Modal */}
       <TermsModal
         isOpen={showTermsModal}
         onClose={() => setShowTermsModal(false)}
-        pdfUrl="/Terms_and_Conditions.pdf"
       />
     </>
   )

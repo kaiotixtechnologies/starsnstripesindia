@@ -49,11 +49,11 @@ export function FadeIn({ children, className = '', delay = 0, style }: {
 // ── Primitives ───────────────────────────────────────────────────────────────
 export const GoldDivider = () => <div className="gold-divider" />
 
-export function Eyebrow({ children, dark = false, className = '' }: {
-  children: React.ReactNode; dark?: boolean; className?: string
+export function Eyebrow({ children, dark = false, className = '', style }: {
+  children: React.ReactNode; dark?: boolean; className?: string; style?: React.CSSProperties
 }) {
   return (
-    <p className={`eyebrow ${className}`} style={{ color: dark ? '#C9A24B' : '#A07828' }}>
+    <p className={`eyebrow ${className}`} style={{ color: dark ? '#C9A24B' : '#A07828', ...style }}>
       {children}
     </p>
   )
