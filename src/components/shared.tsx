@@ -3,14 +3,15 @@ import { Link, useLocation } from 'react-router-dom'
 import logoImg from '../assets/logo.jpg'
 import { IMG_HERO } from '../assets/heroData'
 import { IMG_DARK_SKY } from '../assets/darkSkyData'
+import { IMG_TIGER_FOCUS } from '../assets/tigerData'
 import { IMG_KAIOTIX_LOGO } from '../assets/kaiotixData'
 import TermsModal from './TermsModal'
 
 // ── Images ───────────────────────────────────────────────────────────────────
-export { IMG_HERO, IMG_DARK_SKY }
+export { IMG_HERO, IMG_DARK_SKY, IMG_TIGER_FOCUS }
 export const IMG_MILKY = IMG_DARK_SKY
 export const IMG_TIGER1 = 'https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?w=900&h=700&fit=crop&auto=format'
-export const IMG_TIGER2 = 'https://images.unsplash.com/photo-1680140979890-101e2798dddf?w=900&h=700&fit=crop&auto=format'
+export const IMG_TIGER2 = IMG_TIGER_FOCUS
 export const IMG_TIGER3 = 'https://images.unsplash.com/photo-1659421893105-65170be042ea?w=900&h=700&fit=crop&auto=format'
 export const IMG_TIGER_J = 'https://images.unsplash.com/photo-1589657429197-ecba47e3acd8?w=900&h=700&fit=crop&auto=format'
 export const IMG_STARS = 'https://images.unsplash.com/photo-1595510253629-c231be4125f9?w=1600&h=900&fit=crop&auto=format'
