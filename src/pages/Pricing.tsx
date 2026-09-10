@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FadeIn, GoldDivider, Rule, CheckIcon, XIcon, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_TIGER1 } from '../components/shared'
+import { FadeIn, GoldDivider, Rule, CheckIcon, XIcon, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_PRICING_HERO } from '../components/shared'
 import PaymentModal from '../components/PaymentModal'
 import TermsModal from '../components/TermsModal'
 
@@ -62,7 +62,7 @@ export default function Pricing() {
         eyebrow="Expedition Investment &amp; Terms"
         title="Expedition Pricing"
         subtitle="USD 6,900 per person (double occupancy — inaugural expedition, limited to 8 photographers)"
-        bg={IMG_TIGER1}
+        bg={IMG_PRICING_HERO}
       />
 
       <GoldDivider />

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FadeIn, GoldDivider, Rule, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_TIGER2 } from '../components/shared'
+import { FadeIn, GoldDivider, Rule, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_FAQ_HERO } from '../components/shared'
 
 const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
   {
@@ -97,7 +97,7 @@ export default function FAQ() {
         eyebrow="Frequently Asked Questions"
         title="Expedition FAQ"
         subtitle="Everything you need to know about the itinerary, photography program, logistics, and booking terms."
-        bg={IMG_TIGER2}
+        bg={IMG_FAQ_HERO}
       />
 
       <GoldDivider />

@@ -1,4 +1,4 @@
-import { FadeIn, GoldDivider, Rule, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_TIGER_J, CameraIcon, ShirtIcon, CreditCardIcon, BackpackIcon } from '../components/shared'
+import { FadeIn, GoldDivider, Rule, Eyebrow, GoldBtn, OutlineBtn, PageHero, IMG_INSTRUCTORS_HERO, CameraIcon, ShirtIcon, CreditCardIcon, BackpackIcon } from '../components/shared'
 
 const GEAR_ITEMS = [
   'DSLR/mirrorless body and a sturdy tripod',
@@ -31,7 +31,7 @@ export default function Instructors() {
         eyebrow="Leadership &amp; Preparation"
         title="Your Co-Directors &amp; Expert"
         subtitle="Wildlife guidance from Himanshu Bagde, astrophotography coaching from P S Srinivas (Srini), and dark-sky expertise from Abhishek Pawse."
-        bg={IMG_TIGER_J}
+        bg={IMG_INSTRUCTORS_HERO}
       />
 
       <GoldDivider />
