@@ -63,6 +63,7 @@ export default function Pricing() {
         title="Expedition Pricing"
         subtitle="USD 6,900 per person (double occupancy — inaugural expedition, limited to 8 photographers)"
         bg={IMG_PRICING_HERO}
+        bgPos="center top"
       />
 
       <GoldDivider />

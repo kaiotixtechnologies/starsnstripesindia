@@ -32,6 +32,7 @@ export default function Instructors() {
         title="Your Co-Directors &amp; Expert"
         subtitle="Wildlife guidance from Himanshu Bagde, astrophotography coaching from P S Srinivas (Srini), and dark-sky expertise from Abhishek Pawse."
         bg={IMG_INSTRUCTORS_HERO}
+        bgPos="center 10%"
       />
 
       <GoldDivider />

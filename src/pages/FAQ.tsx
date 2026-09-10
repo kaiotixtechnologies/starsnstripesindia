@@ -98,6 +98,7 @@ export default function FAQ() {
         title="Expedition FAQ"
         subtitle="Everything you need to know about the itinerary, photography program, logistics, and booking terms."
         bg={IMG_FAQ_HERO}
+        bgPos="center 30%"
       />
 
       <GoldDivider />

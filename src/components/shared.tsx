@@ -121,17 +121,28 @@ export function DarkGhostBtn({ children, to }: { children: React.ReactNode; to: 
 }
 
 // ── Page hero (inner pages) ──────────────────────────────────────────────────
-export function PageHero({ eyebrow, title, subtitle, bg }: {
-  eyebrow: string; title: React.ReactNode; subtitle?: string; bg: string
+export function PageHero({ eyebrow, title, subtitle, bg, bgPos = 'center 15%', overlay }: {
+  eyebrow: string; title: React.ReactNode; subtitle?: string; bg: string; bgPos?: string; overlay?: string
 }) {
   return (
     <section className="relative pt-36 pb-24 px-6 overflow-hidden" style={{ background: '#0A1520' }}>
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }} />
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(105deg, rgba(10,21,32,0.88) 50%, rgba(10,21,32,0.55) 100%)' }} />
+      <div 
+        className="absolute inset-0 bg-cover transition-all duration-300" 
+        style={{ 
+          backgroundImage: `url(${bg})`,
+          backgroundPosition: bgPos
+        }} 
+      />
+      <div 
+        className="absolute inset-0" 
+        style={{ 
+          background: overlay || 'linear-gradient(105deg, rgba(10,21,32,0.72) 0%, rgba(10,21,32,0.5) 45%, rgba(10,21,32,0.2) 100%)' 
+        }} 
+      />
       <div className="relative z-10 max-w-6xl mx-auto">
-        <Eyebrow dark className="mb-4">{eyebrow}</Eyebrow>
-        <h1 className="font-serif text-4xl md:text-6xl font-bold text-white leading-[1.05] max-w-2xl">{title}</h1>
-        {subtitle && <p className="mt-5 text-white/55 text-base md:text-lg max-w-xl leading-relaxed">{subtitle}</p>}
+        <Eyebrow dark className="mb-4 drop-shadow">{eyebrow}</Eyebrow>
+        <h1 className="font-serif text-4xl md:text-6xl font-bold text-white leading-[1.05] max-w-2xl drop-shadow-md">{title}</h1>
+        {subtitle && <p className="mt-5 text-white/75 text-base md:text-lg max-w-xl leading-relaxed drop-shadow">{subtitle}</p>}
       </div>
     </section>
   )
