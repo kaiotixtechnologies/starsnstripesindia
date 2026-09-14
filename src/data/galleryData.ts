@@ -1,4 +1,4 @@
-import { IMG_DARK_SKY, IMG_HERO, IMG_TIGER_FOCUS } from "../components/shared"
+import { IMG_DARK_SKY } from "../components/shared"
 
 export interface PhotoItem {
   id: string
@@ -50,45 +50,61 @@ export const ASTRO_PHOTOS: PhotoItem[] = [
   },
 ]
 
+// Wild section photos from wild_section_photos folder ONLY
 export const WILDLIFE_PHOTOS: PhotoItem[] = [
   {
     id: "wild-1",
-    image: IMG_HERO,
-    alt: "Bengal Tiger in golden light",
+    image: "/wildlife/wild-1.jpg",
+    alt: "Wildlife Expedition Photo 1",
   },
   {
     id: "wild-2",
-    image: IMG_TIGER_FOCUS,
-    alt: "Tiger at the forest waterhole",
+    image: "/wildlife/wild-2.jpg",
+    alt: "Wildlife Expedition Photo 2",
   },
   {
     id: "wild-3",
-    image:
-      "https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=1400&auto=format&fit=crop&q=85",
-    alt: "Indian leopard in teak canopy",
+    image: "/wildlife/wild-3.jpg",
+    alt: "Wildlife Expedition Photo 3",
   },
   {
     id: "wild-4",
-    image:
-      "https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=1400&auto=format&fit=crop&q=85",
-    alt: "Sloth bear in morning safari",
+    image: "/wildlife/wild-4.jpg",
+    alt: "Wildlife Expedition Photo 4",
   },
   {
     id: "wild-5",
-    image:
-      "https://images.unsplash.com/photo-1484406566174-9da000fda645?w=1400&auto=format&fit=crop&q=85",
-    alt: "Spotted deer herd in jungle",
+    image: "/wildlife/wild-5.jpg",
+    alt: "Wildlife Expedition Photo 5",
   },
   {
     id: "wild-6",
-    image:
-      "https://images.unsplash.com/photo-1615829386703-e29a9a567c9c?w=1400&auto=format&fit=crop&q=85",
-    alt: "Tiger prowling through grass",
+    image: "/wildlife/wild-6.jpg",
+    alt: "Wildlife Expedition Photo 6",
   },
   {
     id: "wild-7",
-    image:
-      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=1400&auto=format&fit=crop&q=85",
-    alt: "Bengal tiger close encounter",
+    image: "/wildlife/wild-7.jpg",
+    alt: "Wildlife Expedition Photo 7",
+  },
+  {
+    id: "wild-8",
+    image: "/wildlife/wild-8.jpg",
+    alt: "Wildlife Expedition Photo 8",
+  },
+  {
+    id: "wild-9",
+    image: "/wildlife/wild-9.jpg",
+    alt: "Wildlife Expedition Photo 9",
+  },
+  {
+    id: "wild-10",
+    image: "/wildlife/wild-10.jpg",
+    alt: "Wildlife Expedition Photo 10",
+  },
+  {
+    id: "wild-11",
+    image: "/wildlife/wild-11.jpg",
+    alt: "Wildlife Expedition Photo 11",
   },
 ]
