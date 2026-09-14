@@ -14,6 +14,8 @@ import {
   IMG_TIGER2,
   IMG_STARS,
 } from "../components/shared"
+import PhotoSlider from "../components/PhotoSlider"
+import { ASTRO_PHOTOS, WILDLIFE_PHOTOS } from "../data/galleryData"
 
 import type { ReactNode } from "react"
 
@@ -373,6 +375,30 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
+
+      <GoldDivider />
+
+      {/* ── Sliding Photos: Astrophotography Showcase ─────────────────────── */}
+      <PhotoSlider
+        title="Astrophotography in Pench Dark Sky Park"
+        eyebrowText="Celestial Gallery • Bortle Class 3 Night Skies"
+        subtitle="Explore pristine dark-sky exposures, galactic core vistas, and star trails captured during optimal new moon conditions in India's first Dark Sky Park."
+        photos={ASTRO_PHOTOS}
+        theme="dark"
+        sectionId="astrophotography-gallery"
+      />
+
+      <GoldDivider />
+
+      {/* ── Sliding Photos: Wildlife & Tiger Showcase ──────────────────────── */}
+      <PhotoSlider
+        title="Royal Bengal Tigers & Wildlife of Central India"
+        eyebrowText="Wildlife Gallery • Tadoba & Pench Safari Drives"
+        subtitle="Experience exhilarating encounters with Bengal tigers, leopards, and diverse wildlife during prime dry-season safari sessions."
+        photos={WILDLIFE_PHOTOS}
+        theme="light"
+        sectionId="wildlife-gallery"
+      />
 
       <GoldDivider />
 
