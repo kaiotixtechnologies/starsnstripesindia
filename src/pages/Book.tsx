@@ -59,6 +59,7 @@ export default function Book() {
   const [reservationId, setReservationId] = useState("")
   const [agreedToTerms, setAgreedToTerms] = useState(false)
   const [showTermsModal, setShowTermsModal] = useState(false)
+  const [loadingSeats, setLoadingSeats] = useState<boolean>(true)
   const [seatsRemaining, setSeatsRemaining] = useState<number>(() => {
     if (typeof window !== "undefined") {
       const cached = sessionStorage.getItem("sns_seats_left")
@@ -76,48 +77,58 @@ export default function Book() {
     let isMounted = true
     const controller = new AbortController()
 
+    const fetchWithJSON = async (url: string) => {
+      const res = await fetch(url, {
+        method: "GET",
+        mode: "cors",
+        signal: controller.signal,
+      })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      const data = await res.json()
+      if (data && typeof data.seatsRemaining === "number") {
+        return data
+      }
+      throw new Error("No seatsRemaining in payload")
+    }
+
     const fetchAvailableSeats = async () => {
       try {
-        // Direct fast fetch to Google Apps Script with 4s timeout
-        const directRes = await fetch(
-          `${PAYMENTS_APPS_SCRIPT_URL}?action=getSeats`,
-          {
-            method: "GET",
-            mode: "cors",
-            signal: controller.signal,
-          },
-        ).catch(() => null)
+        // Query all candidate endpoints concurrently in parallel
+        const candidates = [
+          fetchWithJSON(`${PAYMENTS_APPS_SCRIPT_URL}?action=getSeats`),
+          fetchWithJSON(`${APPS_SCRIPT_URL}?action=getSeats`),
+          fetchWithJSON("/api/seats"),
+          fetchWithJSON("/api/reservation"),
+        ]
 
-        if (directRes && directRes.ok) {
-          const directData = await directRes.json().catch(() => null)
-          if (
-            isMounted &&
-            directData &&
-            typeof directData.seatsRemaining === "number"
-          ) {
-            const rem = Math.max(0, Math.min(8, directData.seatsRemaining))
-            setSeatsRemaining(rem)
-            setBookedSeats(directData.bookedSeats ?? 8 - rem)
-            sessionStorage.setItem("sns_seats_left", String(rem))
-            return
-          }
-        }
+        const validData = await Promise.any(candidates)
 
-        // Fallback: try serverless proxy (/api/seats)
-        const proxyRes = await fetch("/api/seats", {
-          signal: controller.signal,
-        }).catch(() => null)
-        if (proxyRes && proxyRes.ok) {
-          const data = await proxyRes.json().catch(() => null)
-          if (isMounted && data && typeof data.seatsRemaining === "number") {
-            const rem = Math.max(0, Math.min(8, data.seatsRemaining))
-            setSeatsRemaining(rem)
-            setBookedSeats(data.bookedSeats ?? 8 - rem)
-            sessionStorage.setItem("sns_seats_left", String(rem))
-          }
+        if (
+          isMounted &&
+          validData &&
+          typeof validData.seatsRemaining === "number"
+        ) {
+          const rem = Math.max(0, Math.min(8, validData.seatsRemaining))
+          setSeatsRemaining(rem)
+          setBookedSeats(validData.bookedSeats ?? 8 - rem)
+          sessionStorage.setItem("sns_seats_left", String(rem))
         }
       } catch (err) {
-        // Silently keep default/cached seats without interruption
+        // If all candidate endpoints fail, use cached seats or default
+        if (isMounted) {
+          const cached = sessionStorage.getItem("sns_seats_left")
+          if (cached) {
+            const parsed = parseInt(cached, 10)
+            if (!isNaN(parsed) && parsed >= 0 && parsed <= 8) {
+              setSeatsRemaining(parsed)
+              setBookedSeats(8 - parsed)
+            }
+          }
+        }
+      } finally {
+        if (isMounted) {
+          setLoadingSeats(false)
+        }
       }
     }
 
@@ -250,19 +261,19 @@ ${waitlistData.name}`
   }
 
   const generateMailtoUrl = () => {
-    return `mailto:starsnstripesindia@gmail.com?subject=${encodeURIComponent(
+    return `mailto:info@starsnstripesindia.com?subject=${encodeURIComponent(
       getWaitlistSubject(),
     )}&body=${encodeURIComponent(getWaitlistBody())}`
   }
 
   const generateGmailUrl = () => {
-    return `https://mail.google.com/mail/?view=cm&fs=1&to=starsnstripesindia@gmail.com&su=${encodeURIComponent(
+    return `https://mail.google.com/mail/?view=cm&fs=1&to=info@starsnstripesindia.com&su=${encodeURIComponent(
       getWaitlistSubject(),
     )}&body=${encodeURIComponent(getWaitlistBody())}`
   }
 
   const handleCopyDetails = () => {
-    const fullText = `To: starsnstripesindia@gmail.com\nSubject: ${getWaitlistSubject()}\n\n${getWaitlistBody()}`
+    const fullText = `To: info@starsnstripesindia.com\nSubject: ${getWaitlistSubject()}\n\n${getWaitlistBody()}`
     if (navigator.clipboard) {
       navigator.clipboard.writeText(fullText)
       setCopied(true)
@@ -587,89 +598,117 @@ ${waitlistData.name}`
                   : "This inaugural expedition is limited to 8 photographers. To secure your place, please fill in the form."}
               </p>
 
-              <div className="p-4 bg-[#F2EDE2] rounded-sm mb-4 border border-[#A07828]/20 flex flex-col gap-3">
-                {/* Live Seats Availability Counter */}
-                <div className="flex items-center justify-between gap-2">
-                  <span
-                    className={`eyebrow text-[10px] flex items-center gap-1.5 font-bold ${isSoldOut ? "text-red-700" : "text-[#7A5C1E]"
-                      }`}
-                  >
+              {loadingSeats ? (
+                /* ── LEFT COLUMN: LOADING STATE ── */
+                <div className="p-4 bg-[#F2EDE2] rounded-sm mb-4 border border-[#A07828]/20 flex flex-col gap-3 animate-pulse">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="eyebrow text-[10px] text-[#7A5C1E] flex items-center gap-1.5 font-bold">
+                      <span className="inline-block w-2 h-2 rounded-full bg-[#A07828] animate-ping" />
+                      Live Availability
+                    </span>
+                    <span className="text-xs font-semibold text-[#7A5C1E] bg-white px-2.5 py-0.5 rounded-sm border border-black/10">
+                      Checking spots...
+                    </span>
+                  </div>
+
+                  <div className="w-full bg-black/10 h-2 rounded-full overflow-hidden">
+                    <div className="bg-[#A07828]/50 h-full w-2/3 animate-pulse rounded-full" />
+                  </div>
+
+                  <p className="text-xs text-[#637282] leading-relaxed">
+                    Connecting to live expedition database...
+                  </p>
+                </div>
+              ) : (
+                /* ── LEFT COLUMN: LOADED AVAILABILITY ── */
+                <div className="p-4 bg-[#F2EDE2] rounded-sm mb-4 border border-[#A07828]/20 flex flex-col gap-3">
+                  {/* Live Seats Availability Counter */}
+                  <div className="flex items-center justify-between gap-2">
                     <span
-                      className={`inline-block w-2 h-2 rounded-full ${isSoldOut
-                          ? "bg-red-600"
-                          : seatsRemaining <= 2
+                      className={`eyebrow text-[10px] flex items-center gap-1.5 font-bold ${
+                        isSoldOut ? "text-red-700" : "text-[#7A5C1E]"
+                      }`}
+                    >
+                      <span
+                        className={`inline-block w-2 h-2 rounded-full ${
+                          isSoldOut
+                            ? "bg-red-600"
+                            : seatsRemaining <= 2
                             ? "bg-amber-600"
                             : "bg-[#1A5030]"
                         } animate-pulse`}
+                      />
+                      Live Availability
+                    </span>
+                    <span
+                      className={`text-xs font-bold px-2.5 py-0.5 rounded-sm border shadow-xs ${
+                        isSoldOut
+                          ? "text-red-700 bg-red-50 border-red-200"
+                          : "text-[#0D1B2A] bg-white border-black/10"
+                      }`}
+                    >
+                      {isSoldOut
+                        ? "Fully Booked (0/8 left)"
+                        : `${seatsRemaining} of 8 spots left`}
+                    </span>
+                  </div>
+
+                  {/* Progress Bar of booked spots */}
+                  <div className="w-full bg-black/10 h-2 rounded-full overflow-hidden">
+                    <div
+                      className={`h-full transition-all duration-500 rounded-full ${
+                        isSoldOut ? "bg-red-600" : "bg-[#A07828]"
+                      }`}
+                      style={{
+                        width: `${Math.min(
+                          100,
+                          Math.max(0, ((8 - seatsRemaining) / 8) * 100),
+                        )}%`,
+                      }}
                     />
-                    Live Availability
-                  </span>
-                  <span
-                    className={`text-xs font-bold px-2.5 py-0.5 rounded-sm border shadow-xs ${isSoldOut
-                        ? "text-red-700 bg-red-50 border-red-200"
-                        : "text-[#0D1B2A] bg-white border-black/10"
-                      }`}
-                  >
-                    {isSoldOut
-                      ? "Fully Booked (0/8 left)"
-                      : `${seatsRemaining} of 8 spots left`}
-                  </span>
-                </div>
+                  </div>
 
-                {/* Progress Bar of booked spots */}
-                <div className="w-full bg-black/10 h-2 rounded-full overflow-hidden">
-                  <div
-                    className={`h-full transition-all duration-500 rounded-full ${isSoldOut ? "bg-red-600" : "bg-[#A07828]"
-                      }`}
-                    style={{
-                      width: `${Math.min(
-                        100,
-                        Math.max(0, ((8 - seatsRemaining) / 8) * 100),
-                      )}%`,
-                    }}
-                  />
-                </div>
-
-                <p className="text-xs text-[#4A5568] leading-relaxed">
-                  {isSoldOut ? (
-                    <strong className="text-red-700">
-                      Expedition is currently fully booked (8/8 spots reserved).
-                    </strong>
-                  ) : seatsRemaining <= 2 ? (
-                    <strong className="text-amber-800">
-                      High demand: Only {seatsRemaining}{" "}
-                      {seatsRemaining === 1 ? "seat" : "seats"} remaining!
-                    </strong>
-                  ) : (
-                    <>
-                      Limited to 8 photographers total for dedicated instruction
-                      and open safari jeep spacing.
-                    </>
-                  )}
-                </p>
-
-                {!isSoldOut ? (
-                  <>
-                    <p className="text-xs font-semibold leading-relaxed pt-2 border-t border-black/10 text-[#7A5C1E]">
-                      A USD 2,000 deposit per guest reserves your spot; the
-                      remaining balance is due by November 1, 2026.
-                    </p>
-
-                    {formData.numberOfGuests > 1 && (
-                      <p className="text-xs font-bold text-[#0D1B2A] pt-2 border-t border-black/10">
-                        Selected for {formData.numberOfGuests} Guests: Total
-                        Deposit USD ${totalDeposit.toLocaleString()}
-                      </p>
+                  <p className="text-xs text-[#4A5568] leading-relaxed">
+                    {isSoldOut ? (
+                      <strong className="text-red-700">
+                        Expedition is currently fully booked (8/8 spots reserved).
+                      </strong>
+                    ) : seatsRemaining <= 2 ? (
+                      <strong className="text-amber-800">
+                        High demand: Only {seatsRemaining}{" "}
+                        {seatsRemaining === 1 ? "seat" : "seats"} remaining!
+                      </strong>
+                    ) : (
+                      <>
+                        Limited to 8 photographers total for dedicated instruction
+                        and open safari jeep spacing.
+                      </>
                     )}
-                  </>
-                ) : (
-                  <p className="text-xs font-semibold leading-relaxed pt-2 border-t border-black/10 text-[#7A5C1E]">
-                    Waitlist applicants will be contacted first in case of
-                    cancellations or new departure additions. No deposit
-                    required to join.
                   </p>
-                )}
-              </div>
+
+                  {!isSoldOut ? (
+                    <>
+                      <p className="text-xs font-semibold leading-relaxed pt-2 border-t border-black/10 text-[#7A5C1E]">
+                        A USD 2,000 deposit per guest reserves your spot; the
+                        remaining balance is due by November 1, 2026.
+                      </p>
+
+                      {formData.numberOfGuests > 1 && (
+                        <p className="text-xs font-bold text-[#0D1B2A] pt-2 border-t border-black/10">
+                          Selected for {formData.numberOfGuests} Guests: Total
+                          Deposit USD ${totalDeposit.toLocaleString()}
+                        </p>
+                      )}
+                    </>
+                  ) : (
+                    <p className="text-xs font-semibold leading-relaxed pt-2 border-t border-black/10 text-[#7A5C1E]">
+                      Waitlist applicants will be contacted first in case of
+                      cancellations or new departure additions. No deposit
+                      required to join.
+                    </p>
+                  )}
+                </div>
+              )}
 
               <p className="text-xs italic leading-relaxed text-[#637282] pt-2 border-t border-black/[0.06]">
                 This tour is governed by our Terms and Conditions, including
@@ -786,6 +825,34 @@ ${waitlistData.name}`
                   your email for the reservation details and next steps.
                 </p>
               </div>
+            ) : loadingSeats ? (
+              /* ─────────────────────────────────────────────────────
+                 LOADING STATE (CHECKING LIVE SEAT AVAILABILITY)
+                 ───────────────────────────────────────────────────── */
+              <div className="p-10 sm:p-16 text-center flex flex-col items-center justify-center min-h-[480px] animate-fadeIn">
+                <div className="relative w-16 h-16 mb-6 flex items-center justify-center">
+                  <div className="absolute inset-0 rounded-full border-2 border-[#A07828]/20 animate-ping" />
+                  <div className="w-12 h-12 rounded-full border-3 border-[#A07828]/30 border-t-[#A07828] animate-spin" />
+                </div>
+
+                <h3 className="font-serif text-2xl font-bold text-[#0D1B2A] mb-2">
+                  Checking Live Availability
+                </h3>
+
+                <p className="text-xs sm:text-sm text-[#637282] max-w-sm mx-auto leading-relaxed mb-8">
+                  Verifying current seat reservations for the inaugural expedition (April 5–14, 2027)...
+                </p>
+
+                {/* Shimmer skeleton placeholders */}
+                <div className="w-full max-w-md space-y-3 opacity-60">
+                  <div className="h-4 bg-black/5 rounded animate-pulse w-2/3 mx-auto" />
+                  <div className="h-10 bg-black/5 rounded animate-pulse w-full" />
+                  <div className="grid grid-cols-2 gap-3 pt-1">
+                    <div className="h-10 bg-black/5 rounded animate-pulse" />
+                    <div className="h-10 bg-black/5 rounded animate-pulse" />
+                  </div>
+                </div>
+              </div>
             ) : isSoldOut ? (
               /* ─────────────────────────────────────────────────────
                  SOLD OUT / WAITLIST STATE
@@ -818,7 +885,7 @@ ${waitlistData.name}`
                       {waitlistData.spots}{" "}
                       {waitlistData.spots === 1 ? "seat" : "seats"}
                     </strong>{" "}
-                    to <strong>starsnstripesindia@gmail.com</strong>.
+                    to <strong>info@starsnstripesindia.com</strong>.
                   </p>
 
                   <div className="bg-[#F2EDE2] p-4 rounded-sm max-w-md mx-auto text-left border border-[#A07828]/20 mb-6">
@@ -835,7 +902,7 @@ ${waitlistData.name}`
                       </button>
                     </div>
                     <p className="text-xs text-[#0D1B2A] leading-relaxed">
-                      <strong>To:</strong> starsnstripesindia@gmail.com<br />
+                      <strong>To:</strong> info@starsnstripesindia.com<br />
                       <strong>Name:</strong> {waitlistData.name}<br />
                       <strong>Email:</strong> {waitlistData.email}<br />
                       <strong>Phone:</strong> {waitlistData.phone}<br />
@@ -909,8 +976,8 @@ ${waitlistData.name}`
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-black/[0.08]">
                     <div>
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-red-100 text-red-800 border border-red-200">
-                          Sold Out
+                        <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-[#F2EDE2] text-[#7A5C1E] border border-[#A07828]/30">
+                          Reserved
                         </span>
                         <h3 className="font-serif text-2xl font-bold text-[#0D1B2A]">
                           Expedition Fully Booked
