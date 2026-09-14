@@ -64,3 +64,25 @@ body {
 .hero-in-d3  { animation-delay: 0.40s; }
 .hero-in-d4  { animation-delay: 0.54s; }
 .hero-in-d5  { animation-delay: 0.68s; }
+
+/* ── Continuous Photo Slider Marquee ─────────────────────────────────────── */
+@keyframes photoMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.photo-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: photoMarquee 40s linear infinite;
+}
+
+.photo-marquee-track:hover {
+  animation-play-state: paused;
+}
+
