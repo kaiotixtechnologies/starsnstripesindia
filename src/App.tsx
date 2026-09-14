@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './pages/Home'
-import Itinerary from './pages/Itinerary'
-import Destinations from './pages/Destinations'
-import Instructors from './pages/Instructors'
-import Pricing from './pages/Pricing'
-import WhatsIncluded from './pages/WhatsIncluded'
-import FAQ from './pages/FAQ'
-import Book from './pages/Book'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Layout from "./components/Layout"
+import Home from "./pages/Home"
+import Itinerary from "./pages/Itinerary"
+import Destinations from "./pages/Destinations"
+import Instructors from "./pages/Instructors"
+import Pricing from "./pages/Pricing"
+import WhatsIncluded from "./pages/WhatsIncluded"
+import FAQ from "./pages/FAQ"
+import Book from "./pages/Book"
 
 export default function App() {
   return (
