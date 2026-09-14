@@ -53,7 +53,7 @@ const WHATS_INCLUDED: ReactNode[] = [
 
 const WHATS_NOT_INCLUDED = [
   "Flights to/from Nagpur Airport",
-  "Single room upgrade — at an extra charge, subject to availability",
+  "Single room upgrade — $1,500",
   "Visa fees",
   "Health/travel insurance (strongly recommended — see booking terms)",
   "Camera gear rental (e.g., star tracker, telephoto lens)",

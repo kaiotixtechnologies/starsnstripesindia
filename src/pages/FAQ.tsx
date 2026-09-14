@@ -41,7 +41,7 @@ const FAQS: { category: string items: { q: string a: string }[] }[] = [
       },
       {
         q: "What are the accommodations like in Pench and Tadoba?",
-        a: "Guests stay in luxury jungle lodges: Saj in the Forest (a boutique resort set across 32 acres near Pench’s Turia Gate) for Nights 1–4, and Tathastu Tadoba (The Tiger Village Resort near Moharli Gate) for Nights 5–9. All accommodations are twin-share in airconditioned rooms with private en-suite bathrooms. Single occupancy upgrades are available at an extra charge, subject to lodge availability.",
+        a: "Guests stay in luxury jungle lodges: Saj in the Forest (a boutique resort set across 32 acres near Pench’s Turia Gate) for Nights 1–4, and Tathastu Tadoba (The Tiger Village Resort near Moharli Gate) for Nights 5–9. All accommodations are twin-share in airconditioned rooms with private en-suite bathrooms. Single occupancy upgrades are available for $1,500.",
       },
       {
         q: "What vehicles are used for safaris and road transfers?",

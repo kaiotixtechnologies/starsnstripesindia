@@ -784,9 +784,8 @@ export default function Book() {
                           Twin-Share (USD 6,900)
                         </option>
 
-                        <option value="Single Room Upgrade (at an extra charge, subject to availability)">
-                          Single Room Upgrade (at an extra charge, subject to
-                          availability)
+                        <option value="Single Room Upgrade ($1,500 USD)">
+                          Single Room Upgrade ($1,500 USD)
                         </option>
                       </select>
                     </div>

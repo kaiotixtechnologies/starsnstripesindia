@@ -37,7 +37,7 @@ const WHATS_INCLUDED: ReactNode[] = [
 
 const WHATS_NOT_INCLUDED = [
   "Flights to/from Nagpur Airport",
-  "Single room upgrade — at an extra charge, subject to availability",
+  "Single room upgrade — $1,500",
   "Visa fees",
   "Health/travel insurance (strongly recommended — see booking terms)",
   "Camera gear rental (e.g., star tracker, telephoto lens)",
@@ -163,8 +163,7 @@ export default function WhatsIncluded() {
               >
                 Accommodation is in twin-share airconditioned rooms, each room
                 with a private bathroom, at jungle lodges close to the reserve
-                gates. Single occupancy is available on request at an extra
-                charge, subject to availability.
+                gates. Single occupancy is available on request for $1,500.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">

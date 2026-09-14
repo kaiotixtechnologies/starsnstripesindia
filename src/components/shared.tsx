@@ -675,25 +675,11 @@ export function Footer() {
               </p>
               <a
                 href="mailto:info@starsnstripesindia.com"
-                className="text-sm block mb-4 hover:underline transition-colors"
+                className="text-sm block hover:underline transition-colors"
                 style={{ color: "#C9A24B" }}
               >
                 info@starsnstripesindia.com
               </a>
-              <Link
-                to="/book"
-                onClick={() => handleNavClick("/book")}
-                className="inline-block px-6 py-2.5 text-[10px] tracking-[0.18em] uppercase font-semibold rounded-sm transition-all"
-                style={{ background: "#A07828", color: "#fff" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.background = "#7A5C1E")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.background = "#A07828")
-                }
-              >
-                Reserve Your Spot
-              </Link>
             </div>
           </div>
           <div

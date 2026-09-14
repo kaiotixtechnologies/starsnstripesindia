@@ -35,7 +35,7 @@ const INCLUDED_SUMMARY: ReactNode[] = [
 
 const NOT_INCLUDED_SUMMARY = [
   "Flights to/from Nagpur Airport (NAG)",
-  "Single room upgrade — at an extra charge, subject to availability",
+  "Single room upgrade — $1,500",
   "Visa fees (Indian e-Visa)",
   "Health and travel insurance (strongly recommended)",
   "Camera gear rental (star tracker, telephoto lens)",
@@ -149,8 +149,7 @@ export default function Pricing() {
                   </p>
                 )}
                 <p className="text-white/60 text-xs mt-2">
-                  Single room upgrade: add $1,500 USD for single occupancy
-                  (subject to availability).
+                  Single room upgrade: add $1,500 USD for single occupancy.
                 </p>
               </div>
 
@@ -290,8 +289,7 @@ export default function Pricing() {
                 </p>
                 <p className="text-xs text-[#637282]">
                   Total tour price: USD 6,900 per person (double occupancy).
-                  Single room upgrade: add $1,500 USD for single occupancy
-                  (subject to availability).
+                  Single room upgrade: add $1,500 USD for single occupancy.
                 </p>
               </div>
 
