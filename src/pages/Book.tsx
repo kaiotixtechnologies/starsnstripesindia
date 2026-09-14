@@ -59,18 +59,55 @@ export default function Book() {
   const [reservationId, setReservationId] = useState("")
   const [agreedToTerms, setAgreedToTerms] = useState(false)
   const [showTermsModal, setShowTermsModal] = useState(false)
-  const [loadingSeats, setLoadingSeats] = useState<boolean>(true)
+  const [loadingSeats, setLoadingSeats] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      const cachedStr = sessionStorage.getItem("sns_seats_cache")
+      if (cachedStr) {
+        try {
+          const cached = JSON.parse(cachedStr)
+          // If cached within the last 3 minutes, load instantly without showing the loading skeleton
+          if (
+            cached &&
+            typeof cached.seatsRemaining === "number" &&
+            Date.now() - cached.timestamp < 180000
+          ) {
+            return false
+          }
+        } catch {}
+      }
+    }
+    return true
+  })
+
   const [seatsRemaining, setSeatsRemaining] = useState<number>(() => {
     if (typeof window !== "undefined") {
-      const cached = sessionStorage.getItem("sns_seats_left")
-      if (cached) {
-        const parsed = parseInt(cached, 10)
-        if (!isNaN(parsed) && parsed >= 0 && parsed <= 8) return parsed
+      const cachedStr = sessionStorage.getItem("sns_seats_cache")
+      if (cachedStr) {
+        try {
+          const cached = JSON.parse(cachedStr)
+          if (cached && typeof cached.seatsRemaining === "number") {
+            return Math.max(0, Math.min(8, cached.seatsRemaining))
+          }
+        } catch {}
       }
     }
     return 0
   })
-  const [bookedSeats, setBookedSeats] = useState<number>(0)
+
+  const [bookedSeats, setBookedSeats] = useState<number>(() => {
+    if (typeof window !== "undefined") {
+      const cachedStr = sessionStorage.getItem("sns_seats_cache")
+      if (cachedStr) {
+        try {
+          const cached = JSON.parse(cachedStr)
+          if (cached && typeof cached.bookedSeats === "number") {
+            return cached.bookedSeats
+          }
+        } catch {}
+      }
+    }
+    return 8
+  })
   const reservationReceivedRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -97,24 +134,22 @@ export default function Book() {
             typeof data.seatsRemaining === "number"
           ) {
             const rem = Math.max(0, Math.min(8, data.seatsRemaining))
+            const booked = data.bookedSeats ?? 8 - rem
             setSeatsRemaining(rem)
-            setBookedSeats(data.bookedSeats ?? 8 - rem)
-            sessionStorage.setItem("sns_seats_left", String(rem))
+            setBookedSeats(booked)
+            sessionStorage.setItem(
+              "sns_seats_cache",
+              JSON.stringify({
+                seatsRemaining: rem,
+                bookedSeats: booked,
+                timestamp: Date.now(),
+              }),
+            )
             return
           }
         }
       } catch (err) {
-        // If network error, use cached seats if available
-        if (isMounted) {
-          const cached = sessionStorage.getItem("sns_seats_left")
-          if (cached) {
-            const parsed = parseInt(cached, 10)
-            if (!isNaN(parsed) && parsed >= 0 && parsed <= 8) {
-              setSeatsRemaining(parsed)
-              setBookedSeats(8 - parsed)
-            }
-          }
-        }
+        // Silent error
       } finally {
         if (isMounted) {
           setLoadingSeats(false)
