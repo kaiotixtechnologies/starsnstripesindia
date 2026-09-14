@@ -384,7 +384,7 @@ export default function Home() {
         eyebrowText="Celestial Gallery • Bortle Class 3 Night Skies"
         subtitle="Explore pristine dark-sky exposures, galactic core vistas, and star trails captured during optimal new moon conditions in India's first Dark Sky Park."
         photos={ASTRO_PHOTOS}
-        theme="dark"
+        theme="light"
         sectionId="astrophotography-gallery"
       />
 
