@@ -24,6 +24,8 @@ import { IMG_DESTINATIONS_HERO } from "../assets/destinationsHeroData"
 
 import { IMG_WHATS_INCLUDED_HERO } from "../assets/whatsIncludedHeroData"
 
+import { IMG_BOOK_HERO } from "../assets/bookHeroData"
+
 import TermsModal from "./TermsModal"
 
 // ── Images ───────────────────────────────────────────────────────────────────
@@ -38,6 +40,7 @@ export {
   IMG_ITINERARY_HERO,
   IMG_DESTINATIONS_HERO,
   IMG_WHATS_INCLUDED_HERO,
+  IMG_BOOK_HERO,
 }
 
 export const IMG_MILKY = IMG_DARK_SKY

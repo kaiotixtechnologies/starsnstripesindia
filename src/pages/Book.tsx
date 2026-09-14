@@ -4,7 +4,7 @@ import {
   GoldDivider,
   OutlineBtn,
   PageHero,
-  IMG_TIGER1,
+  IMG_BOOK_HERO,
   Eyebrow,
 } from "../components/shared"
 import TermsModal from "../components/TermsModal"
@@ -462,7 +462,7 @@ export default function Book() {
         eyebrow="Reserve Your Place · April 5–14, 2027"
         title="HOW TO BOOK?"
         subtitle="This inaugural expedition is limited to 8 photographers. A USD 2,000 deposit reserves your spot; the remaining balance is due by November 1, 2026."
-        bg={IMG_TIGER1}
+        bg={IMG_BOOK_HERO}
       />
 
       <GoldDivider />
