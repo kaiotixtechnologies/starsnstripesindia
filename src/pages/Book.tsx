@@ -68,7 +68,7 @@ export default function Book() {
         if (!isNaN(parsed) && parsed >= 0 && parsed <= 8) return parsed
       }
     }
-    return 8
+    return 0
   })
   const [bookedSeats, setBookedSeats] = useState<number>(0)
   const reservationReceivedRef = useRef<HTMLDivElement>(null)
@@ -77,44 +77,34 @@ export default function Book() {
     let isMounted = true
     const controller = new AbortController()
 
-    const fetchWithJSON = async (url: string) => {
-      const res = await fetch(url, {
-        method: "GET",
-        mode: "cors",
-        signal: controller.signal,
-      })
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      const data = await res.json()
-      if (data && typeof data.seatsRemaining === "number") {
-        return data
-      }
-      throw new Error("No seatsRemaining in payload")
-    }
-
     const fetchAvailableSeats = async () => {
       try {
-        // Query all candidate endpoints concurrently in parallel
-        const candidates = [
-          fetchWithJSON(`${PAYMENTS_APPS_SCRIPT_URL}?action=getSeats`),
-          fetchWithJSON(`${APPS_SCRIPT_URL}?action=getSeats`),
-          fetchWithJSON("/api/seats"),
-          fetchWithJSON("/api/reservation"),
-        ]
+        // Direct authoritative fetch to the Payments Google Apps Script getSeats endpoint
+        const response = await fetch(
+          `${PAYMENTS_APPS_SCRIPT_URL}?action=getSeats`,
+          {
+            method: "GET",
+            mode: "cors",
+            signal: controller.signal,
+          },
+        )
 
-        const validData = await Promise.any(candidates)
-
-        if (
-          isMounted &&
-          validData &&
-          typeof validData.seatsRemaining === "number"
-        ) {
-          const rem = Math.max(0, Math.min(8, validData.seatsRemaining))
-          setSeatsRemaining(rem)
-          setBookedSeats(validData.bookedSeats ?? 8 - rem)
-          sessionStorage.setItem("sns_seats_left", String(rem))
+        if (response.ok) {
+          const data = await response.json()
+          if (
+            isMounted &&
+            data &&
+            typeof data.seatsRemaining === "number"
+          ) {
+            const rem = Math.max(0, Math.min(8, data.seatsRemaining))
+            setSeatsRemaining(rem)
+            setBookedSeats(data.bookedSeats ?? 8 - rem)
+            sessionStorage.setItem("sns_seats_left", String(rem))
+            return
+          }
         }
       } catch (err) {
-        // If all candidate endpoints fail, use cached seats or default
+        // If network error, use cached seats if available
         if (isMounted) {
           const cached = sessionStorage.getItem("sns_seats_left")
           if (cached) {
