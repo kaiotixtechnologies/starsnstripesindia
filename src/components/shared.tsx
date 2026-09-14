@@ -364,26 +364,42 @@ export function PageHero({
   subtitle,
   bg,
   bgPos = "center 15%",
+  bgSize = "cover",
+  bgScale,
+  bgTransform,
+  bgClassName,
+  className,
   overlay,
+  minHeight = "min-h-[480px] md:min-h-[500px] lg:min-h-[520px]",
 }: {
   eyebrow: string
   title: React.ReactNode
   subtitle?: string
   bg: string
   bgPos?: string
+  bgSize?: string
+  bgScale?: number | string
+  bgTransform?: string
+  bgClassName?: string
+  className?: string
   overlay?: string
+  minHeight?: string
 }) {
+  const transformStyle = bgTransform || (bgScale ? `scale(${bgScale})` : undefined)
+
   return (
     <section
-      className="relative pt-36 pb-24 px-6 overflow-hidden"
+      className={`relative pt-36 pb-24 px-6 overflow-hidden ${minHeight} ${className || ""}`}
       style={{ background: "#0A1520" }}
     >
       <div
-        className="absolute inset-0 bg-cover transition-all duration-300"
+        className={`absolute inset-0 transition-all duration-300 ${bgClassName || ""}`}
         style={{
           backgroundImage: `url(${bg})`,
-
           backgroundPosition: bgPos,
+          backgroundSize: bgSize,
+          backgroundRepeat: "no-repeat",
+          ...(transformStyle ? { transform: transformStyle, transformOrigin: "center center" } : {}),
         }}
       />
       <div
@@ -394,7 +410,7 @@ export function PageHero({
             "linear-gradient(105deg, rgba(10,21,32,0.72) 0%, rgba(10,21,32,0.5) 45%, rgba(10,21,32,0.2) 100%)",
         }}
       />
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
         <Eyebrow dark className="mb-4 drop-shadow">
           {eyebrow}
         </Eyebrow>
