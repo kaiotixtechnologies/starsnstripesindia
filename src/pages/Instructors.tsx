@@ -43,7 +43,7 @@ export default function Instructors() {
       <PageHero
         eyebrow="Leadership &amp; Preparation"
         title="Your Co-Directors &amp; Expert"
-        subtitle="Wildlife guidance from Himanshu Bagde, astrophotography coaching from P S Srinivas (Srini), and dark-sky expertise from Abhishek Pawse."
+        subtitle="Wildlife guidance from Himanshu Bagde, astrophotography coaching from P S Srinivas (“Srini”), and dark-sky expertise from Abhishek Pawse."
         bg={IMG_INSTRUCTORS_HERO}
         bgPos="center 40%"
       />
@@ -114,7 +114,7 @@ export default function Instructors() {
                     className="font-serif text-xl font-bold mb-1"
                     style={{ color: "#0D1B2A" }}
                   >
-                    Srini (P S Srinivas) — Co-Director, Astrophotography &amp;
+                    P S Srinivas (“Srini”) — Co-Director, Astrophotography &amp;
                     Post-Processing Guide
                   </h3>
                   <p className="text-xs text-[#A07828] font-semibold mb-4">

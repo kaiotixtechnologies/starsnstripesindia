@@ -178,7 +178,7 @@ export default function PaymentModal({
           <div className="text-right">
             <span className="text-xs text-slate-500 block">Total Amount</span>
             <span className="font-serif text-lg font-bold text-[#A07828]">
-              ${amountUSD.toLocaleString()} USD
+              US$ {amountUSD.toLocaleString()}
             </span>
           </div>
         </div>
@@ -325,8 +325,8 @@ export default function PaymentModal({
                     className="w-full py-3.5 mt-2 bg-[#A07828] hover:bg-[#7A5C1E] text-white font-semibold text-xs tracking-widest uppercase rounded shadow transition-all flex items-center justify-center gap-2"
                   >
                     <span className="flex items-center gap-2">
-                      <LockIcon className="w-4 h-4" /> Pay $
-                      {amountUSD.toLocaleString()} USD
+                      <LockIcon className="w-4 h-4" /> Pay US${" "}
+                      {amountUSD.toLocaleString()}
                     </span>
                   </button>
                 </form>
@@ -458,7 +458,7 @@ export default function PaymentModal({
                     type="submit"
                     className="w-full py-3.5 bg-[#A07828] hover:bg-[#7A5C1E] text-white font-semibold text-xs tracking-widest uppercase rounded shadow transition-all"
                   >
-                    Pay via UPI (${amountUSD.toLocaleString()})
+                    Pay via UPI (US$ {amountUSD.toLocaleString()})
                   </button>
                 </form>
               )}
@@ -579,7 +579,7 @@ export default function PaymentModal({
                 <div className="flex justify-between border-b border-slate-200 pb-2">
                   <span className="text-slate-500">Amount Paid:</span>
                   <span className="font-semibold text-emerald-700">
-                    ${amountUSD.toLocaleString()} USD
+                    US$ {amountUSD.toLocaleString()}
                   </span>
                 </div>
                 <div className="flex justify-between">

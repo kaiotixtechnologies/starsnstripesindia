@@ -150,13 +150,16 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                   1. About These Terms
                 </h2>
                 <p>
-                  These Terms and Conditions (“Terms”) govern your booking and
-                  participation in the “Stars, Stripes &amp; Wild India”
-                  photography expedition (the “Trip”), organized by P S Srinivas
-                  and Himanshu Bagde as co-directors(“the Organizers,” “we,”
-                  “us”), joined in Pench by astrophotography expert Abhishek
-                  Pawse. By submitting a deposit or otherwise confirming a
-                  booking, you (“Guest,” “you”) agree to be bound by these
+                  These Terms and Conditions (&quot;Terms&quot;) govern your
+                  booking and participation in the &quot;Stars, Stripes &amp;
+                  Wild India&quot; photography expedition (the &quot;Trip&quot;).
+                  The Trip is organized and co-directed by P S Srinivas and
+                  Himanshu Bagde (the &quot;Organizers,&quot; &quot;we,&quot;
+                  &quot;us&quot;), joined in Pench by astrophotography expert
+                  Abhishek Pawse. The Organizers and Abhishek Pawse are together
+                  referred to in these Terms as the &quot;Trip Leaders.&quot; By
+                  submitting a deposit or otherwise confirming a booking, you
+                  (&quot;Guest,&quot; &quot;you&quot;) agree to be bound by these
                   Terms.
                 </p>
               </section>
@@ -204,27 +207,30 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                 <ul className="space-y-2 pl-2">
                   <li>
                     <strong>3.1</strong> A booking is confirmed on receipt of a
-                    non-refundable deposit of $2,000 USD per person.
+                    non-refundable deposit of US$ 2,000 per person.
                   </li>
                   <li>
-                    <strong>3.2</strong> The remaining balance ($4,900 USD per
-                    person, double occupancy; add $1,500 USD for single
-                    occupancy) is due by November 1, 2026.
+                    <strong>3.2</strong> The remaining balance (US$ 4,900 double
+                    occupancy; add US$ 1,500 for single) is due no later than 7
+                    days after the Organizers confirm under Section 5.1 that the
+                    Trip will proceed (the &quot;Balance Due Date&quot;), and in
+                    any event no later than November 8, 2026.
                   </li>
                   <li>
-                    <strong>3.3</strong> Bookings made after November 1, 2026,
-                    where space permits, require full payment at the time of
-                    booking.
+                    <strong>3.3</strong> Bookings made on or after November 9,
+                    2026, where space permits, require full payment at the time
+                    of booking.
                   </li>
                   <li>
                     <strong>3.4</strong> All payments are to be made in US
-                    Dollars by Zelle, Venmo, Paypal, credit card or bank
-                    transfer; account details to be provided at the time of
-                    confirmation of participation. If any of the above funds’
-                    transfer modes charge any fees to the Organizers’, such fees
-                    shall be borne in full by the Guest. The amounts mentioned
-                    above are all the amounts, net of all transaction
-                    costs/transfer fees, due to the Organizers.
+                    Dollars by Zelle, Venmo, PayPal, credit card, or bank
+                    transfer, to P S Srinivas as an individual, in his capacity
+                    as co-director, and not to a corporate entity; account
+                    details will be provided at the time of confirmation of
+                    participation. If any of the above payment methods charge a
+                    fee, that fee shall be borne in full by the Guest. The
+                    amounts stated in these Terms are net amounts due to the
+                    Organizers, after all transaction costs and transfer fees.
                   </li>
                   <li>
                     <strong>3.5</strong> Failure to pay the balance by the due
@@ -241,11 +247,12 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     original payment.
                   </li>
                   <li>
-                    <strong>3.7</strong> If a credit card payment is accepted
-                    for any portion of the Trip cost, the Guest agrees not to
-                    initiate a chargeback for amounts properly charged under
-                    these Terms, and to raise any billing dispute directly with
-                    the Organizers first.
+                    <strong>3.7</strong> If any portion of the Trip cost is paid
+                    by credit card, Venmo, or PayPal, the Guest agrees not to
+                    initiate a chargeback, payment dispute, or buyer-protection
+                    claim through the card issuer, Venmo, or PayPal for amounts
+                    properly charged under these Terms, and to raise any such
+                    dispute directly with the Organizers first.
                   </li>
                 </ul>
               </section>
@@ -257,17 +264,18 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                 </h2>
                 <ul className="space-y-2 pl-2">
                   <li>
-                    <strong>4.1</strong> Cancellation on or before November 1,
-                    2026: the $2,000 deposit is forfeited; any further payments
+                    <strong>4.1</strong> Cancellation before the Balance Due
+                    Date: the US$ 2,000 deposit is forfeited; any further payments
                     already made are refunded in full.
                   </li>
                   <li>
-                    <strong>4.2</strong> Cancellation between November 1 and
-                    November 15, 2026: 50% of the total Trip cost is forfeited.
+                    <strong>4.2</strong> Cancellation on or after the Balance
+                    Due Date but before November 15, 2026: 50% of the total Trip
+                    cost is forfeited.
                   </li>
                   <li>
-                    <strong>4.3</strong> Cancellation on or after November 16,
-                    2026: no refund is available. At the Organizer's discretion,
+                    <strong>4.3</strong> Cancellation on or after November 15,
+                    2026: no refund is available. At the Organizers’ discretion,
                     a full or partial credit toward a future departure of this
                     Trip may be offered, subject to availability.
                   </li>
@@ -277,10 +285,10 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     cancelled. If a cancelled spot is subsequently filled by a
                     new Guest, the Organizers will refund the cancelling Guest
                     the amount recovered from the replacement booking, less a
-                    $250 administrative fee and any non-recoverable costs
-                    already committed on the cancelling Guest's behalf (such as
-                    permits or deposits paid to lodges). This applies even where
-                    the cancellation falls within the no-refund window in
+                    US$ 250 administrative fee and any non-recoverable costs
+                    already committed on the cancelling Guest&#39;s behalf (such
+                    as permits or deposits paid to lodges). This applies even
+                    where the cancellation falls within the no-refund window in
                     Section 4.3.
                   </li>
                   <li>
@@ -306,10 +314,11 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                   <li>
                     <strong>5.1 Minimum numbers:</strong> this Trip requires a
                     minimum of six (6) confirmed Guests to proceed at the price
-                    quoted. If this minimum is not reached by November 15, 2026,
-                    the Organizer may cancel the Trip, in which case all
-                    payments made will be refunded in full, or may offer Guests
-                    the option to proceed at an adjusted price.
+                    quoted. The Organizers will confirm by November 1, 2026
+                    whether this minimum has been met. If not reached by that
+                    date, the Organizers may cancel the Trip (full refund of all
+                    payments) or offer Guests the option to proceed with the
+                    Trip at an adjusted price.
                   </li>
                   <li>
                     <strong>5.2</strong> The Organizers may make reasonable
@@ -326,10 +335,10 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     <strong>5.3</strong> If the Organizers cancel the Trip for a
                     reason other than Force Majeure (Section 11) or insufficient
                     bookings (Section 5.1), Guests will receive a full refund of
-                    all payments made. This refund is the Guest's sole remedy;
-                    the Organizers are not responsible for any other costs
-                    incurred by the Guest, including flights, visas, or gear
-                    purchased for the Trip.
+                    all payments made. This refund is the Guest&#39;s sole
+                    remedy; the Organizers are not responsible for any other
+                    costs incurred by the Guest, including flights, visas, or
+                    gear purchased for the Trip.
                   </li>
                 </ul>
               </section>
@@ -343,12 +352,12 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                   <li>
                     <strong>6.1</strong> Guests are solely responsible for
                     holding a valid passport, the correct visa or e-Visa for
-                    entry to India, and any other documentation and/health
+                    entry to India, and any other documentation and/or health
                     requirements required for travel.
                   </li>
                   <li>
                     <strong>6.2</strong> The Organizers are not responsible for
-                    losses arising from a Guest's failure to obtain correct
+                    losses arising from a Guest&#39;s failure to obtain correct
                     travel documents.
                   </li>
                 </ul>
@@ -376,7 +385,7 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     described, and for disclosing to the Organizers, before
                     booking, any medical condition that may affect their ability
                     to participate safely. The Organizers may decline or
-                    discontinue a Guest's participation where a physical or
+                    discontinue a Guest&#39;s participation where a physical or
                     medical condition poses a risk to that Guest or to others,
                     and may request written medical clearance before departure
                     where reasonably necessary.
@@ -385,7 +394,7 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     <strong>7.3</strong> Guests are required to hold
                     comprehensive travel insurance valid internationally,
                     covering at minimum: emergency medical and evacuation
-                    expenses (minimum $100,000 USD medical, $200,000 USD
+                    expenses (minimum US$ 100,000 medical, US$ 200,000
                     evacuation and repatriation), trip cancellation and
                     interruption, and loss of personal belongings, for the full
                     duration of the Trip.
@@ -393,9 +402,9 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                   <li>
                     <strong>7.4</strong> Guests must provide the Organizers, no
                     later than 30 days before departure: proof of the insurance
-                    required under 7.3, the insurer's emergency contact details
-                    and policy number, and the names, relationship, phone
-                    number, and email address of two personal emergency
+                    required under 7.3, the insurer&#39;s emergency contact
+                    details and policy number, and the names, relationship,
+                    phone number, and email address of two personal emergency
                     contacts. Failure to provide this information may result in
                     exclusion from the Trip without refund.
                   </li>
@@ -412,8 +421,8 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     <strong>7.6</strong> Guests are solely responsible for the
                     care, security, and insurance of their own photographic and
                     personal equipment (including cameras, lenses, star
-                    trackers, laptops, etc.) throughout the Trip. The Organizer
-                    accepts no liability for loss, theft, or damage to personal
+                    trackers, laptops, etc.) throughout the Trip. The Organizers
+                    accept no liability for loss, theft, or damage to personal
                     equipment during transit, safaris, astrophotography
                     sessions, or at lodges.
                   </li>
@@ -468,24 +477,25 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     authorities.
                   </li>
                   <li>
-                    <strong>9.2 Drones:</strong> India's import regulations make
-                    it very difficult for tourists to bring personal drones into
-                    the country, and drones are not permitted inside either
-                    reserve in any case. Guests are strongly advised not to
-                    bring drones on this Trip. The Organizers are not
+                    <strong>9.2 Drones:</strong> India&#39;s import regulations
+                    make it very difficult for tourists to bring personal drones
+                    into the country, and drones are not permitted inside
+                    either reserve in any case. Guests are strongly advised not
+                    to bring drones on this Trip. The Organizers are not
                     responsible for any drone confiscated, delayed, or refused
                     entry by Indian customs authorities.
                   </li>
                   <li>
                     <strong>9.3</strong> The Organizers may, at their sole
                     discretion, remove any Guest from the Trip without refund
-                    where that Guest's conduct is judged to endanger the safety
-                    or enjoyment of the group, or to violate park regulations.
+                    where that Guest&#39;s conduct is judged to endanger the
+                    safety or enjoyment of the group, or to violate park
+                    regulations.
                   </li>
                   <li>
                     <strong>9.4 Late arrival or early departure:</strong> no
                     refund is available for any portion of the Trip missed due
-                    to a Guest's late arrival or early departure. A Guest
+                    to a Guest&#39;s late arrival or early departure. A Guest
                     arriving late is responsible for any additional cost of
                     rejoining the group, and the Organizers cannot guarantee
                     that a late Guest will be able to rejoin. A Guest departing
@@ -514,11 +524,11 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     <strong>10.2</strong> To the fullest extent permitted by
                     applicable law (Indian as well as the laws applicable in any
                     other jurisdiction relevant to the Guest), Guests
-                    voluntarily assume these risks and release the Organizers,
-                    Abhishek Pawse, and their respective agents, from claims,
-                    liabilities, losses, or damages arising from participation
-                    in the Trip, except to the extent caused by the Organizers’
-                    gross negligence or willful misconduct.
+                    voluntarily assume these risks and release the Trip Leaders
+                    and their respective agents, from claims, liabilities,
+                    losses, or damages arising from participation in the Trip,
+                    except to the extent caused by the Organizers&#39; gross
+                    negligence or willful misconduct.
                   </li>
                 </ul>
               </section>
@@ -540,12 +550,12 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                   <li>
                     <strong>11.2</strong> If the Trip is cancelled due to a
                     Force Majeure Event, the Organizers will use reasonable
-                    efforts to recover costs from third-party suppliers (lodges,
-                    ground operator, permits) and will refund Guests the amount
-                    recovered, less any costs already reasonably incurred by the
-                    Organizer in preparing for the Trip. The Organizers are not
-                    obligated to refund amounts that cannot be recovered from
-                    third parties.
+                    efforts to recover costs from third-party suppliers
+                    (lodges, ground operator, permits) and will refund Guests
+                    the amount recovered, less any costs already reasonably
+                    incurred by the Organizers in preparing for the Trip. The
+                    Organizers are not obligated to refund amounts that cannot
+                    be recovered from third parties.
                   </li>
                 </ul>
               </section>
@@ -576,23 +586,15 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                 <h2 className="font-serif text-lg font-bold text-[#0D1B2A] mb-3">
                   13. Third-Party Suppliers
                 </h2>
-                <ul className="space-y-2 pl-2">
-                  <li>
-                    <strong>13.1</strong> Lodges, safari vehicle operators,
-                    drivers, and other on-the-ground services are provided by
-                    independent third-party suppliers, not by the Organizers
-                    directly. While the Organizers select suppliers they believe
-                    to be reputable, the Organizers are not liable for a
-                    supplier's own negligence, error, or failure to deliver a
-                    service to the expected standard.
-                  </li>
-                  <li>
-                    <strong>13.2</strong> This section does not apply to the
-                    Organizers or Abhishek Pawse, who are engaged directly as
-                    co-director and astrophotography expert respectively, not as
-                    third-party suppliers.
-                  </li>
-                </ul>
+                <p>
+                  <strong>13.1</strong> Lodges, safari vehicle operators,
+                  drivers, and other on-the-ground vendors are independent
+                  third-party suppliers, distinct from the Trip Leaders. While
+                  the Trip Leaders select suppliers they believe to be
+                  reputable, the Trip Leaders are not liable for a supplier&#39;s
+                  own negligence, error, or failure to deliver a service to the
+                  expected standard.
+                </p>
               </section>
 
               {/* 14. Photography and Media */}
@@ -611,19 +613,19 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     Guest opts out in writing before the Trip begins.
                   </li>
                   <li>
-                    <strong>14.2</strong> This section does not affect a Guest's
-                    ownership of photographs they personally capture during the
-                    Trip.
+                    <strong>14.2</strong> This section does not affect a
+                    Guest&#39;s ownership of photographs they personally capture
+                    during the Trip.
                   </li>
                   <li>
                     <strong>14.3</strong> If a Guest chooses to share their own
-                    trip photographs or video with the Organizer after the Trip,
-                    the Guest retains full ownership, and grants the Organizer a
-                    non-exclusive, royalty-free license to use that material to
-                    promote future editions of this Trip, with photographer
-                    credit given where practical. The Organizer will not use a
-                    Guest's personal material for any other purpose without that
-                    Guest's separate written consent.
+                    trip photographs or video with the Organizers after the Trip,
+                    the Guest retains full ownership, and grants the Organizers
+                    a non-exclusive, royalty-free license to use that material
+                    to promote future editions of this Trip, with photographer
+                    credit given where practical. The Organizers will not use a
+                    Guest&#39;s personal material for any other purpose without
+                    that Guest&#39;s separate written consent.
                   </li>
                 </ul>
               </section>
@@ -638,8 +640,8 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                   should raise it with a co-director at the time, so it can be
                   addressed while still on Trip. If a Guest remains dissatisfied
                   after the Trip, a written complaint should be sent to the
-                  Organizer within 30 days of the Trip's completion. The
-                  Organizer will respond in good faith within a reasonable time.
+                  Organizers within 30 days of the Trip&#39;s completion. The
+                  Organizers will respond in good faith within a reasonable time.
                 </p>
               </section>
 
@@ -659,10 +661,11 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                     arrange their services.
                   </li>
                   <li>
-                    <strong>16.2</strong> The Organizers will not use a Guest's
-                    personal information for marketing purposes without that
-                    Guest's consent, and will not sell or share Guest
-                    information beyond what is necessary to operate the Trip.
+                    <strong>16.2</strong> The Organizers will not use a
+                    Guest&#39;s personal information for marketing purposes
+                    without that Guest&#39;s consent, and will not sell or share
+                    Guest information beyond what is necessary to operate the
+                    Trip.
                   </li>
                 </ul>
               </section>
@@ -686,7 +689,7 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
                   </li>
                   <li>
                     <strong>17.3</strong> Any claim must be brought within one
-                    month of the event giving rise to it.
+                    year of the event giving rise to it.
                   </li>
                 </ul>
               </section>

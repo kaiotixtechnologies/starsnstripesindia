@@ -41,7 +41,7 @@ const FAQS: { category: string items: { q: string a: string }[] }[] = [
       },
       {
         q: "What are the accommodations like in Pench and Tadoba?",
-        a: "Guests stay in luxury jungle lodges: Saj in the Forest (a boutique resort set across 32 acres near Pench’s Turia Gate) for Nights 1–4, and Tathastu Tadoba (The Tiger Village Resort near Moharli Gate) for Nights 5–9. All accommodations are twin-share in airconditioned rooms with private en-suite bathrooms. Single occupancy upgrades are available for $1,500.",
+        a: "Guests stay in luxury jungle lodges: Saj in the Forest (a boutique resort set across 32 acres near Pench’s Turia Gate) for Nights 1–4, and Tathastu Tadoba (The Tiger Village Resort near Moharli Gate) for Nights 5–9. All accommodations are twin-share in airconditioned rooms with private en-suite bathrooms. Single occupancy upgrades are available for US$ 1,500.",
       },
       {
         q: "What vehicles are used for safaris and road transfers?",
@@ -79,11 +79,11 @@ const FAQS: { category: string items: { q: string a: string }[] }[] = [
     items: [
       {
         q: "What is the price and payment schedule?",
-        a: "The price is $6,900 USD per person (double occupancy). A non-refundable deposit of $2,000 USD per person is required upon booking to secure your spot. The remaining balance ($4,900 USD per person, double occupancy; add $1,500 USD for single occupancy) is due by November 1, 2026.",
+        a: "The price is US$ 6,900 per person (double occupancy; add US$ 1,500 for single occupancy). A non-refundable deposit of US$ 2,000 per person is required upon booking to secure your spot. The remaining balance (US$ 4,900 double occupancy; add US$ 1,500 for single) is due no later than 7 days after the Organizers confirm that the Trip will proceed (the Balance Due Date), and in any event no later than November 8, 2026. Bookings made on or after November 9, 2026 require full payment at the time of booking.",
       },
       {
         q: "What is the cancellation and refund policy?",
-        a: "Cancellation on or before November 1, 2026: the $2,000 deposit is forfeited and any further payments already made are refunded in full. Cancellation between November 1 and November 15, 2026: 50% of the total Trip cost is forfeited. Cancellation on or after November 16, 2026: no refund is available. We strongly recommend purchasing comprehensive international travel insurance upon booking.",
+        a: "Cancellation before the Balance Due Date: the US$ 2,000 deposit is forfeited; any further payments already made are refunded in full. Cancellation on or after the Balance Due Date but before November 15, 2026: 50% of the total Trip cost is forfeited. Cancellation on or after November 15, 2026: no refund is available (at Organizers' discretion, a credit toward a future departure may be offered). If a cancelled spot is refilled by a new guest, the recovered amount is refunded less a US$ 250 admin fee and non-recoverable committed costs. Comprehensive international travel insurance is required for all guests.",
       },
       {
         q: "What is included in the tour price?",

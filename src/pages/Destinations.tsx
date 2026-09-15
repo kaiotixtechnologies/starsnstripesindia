@@ -16,8 +16,6 @@ const PENCH_THEMES = [
   "Night-sky storytelling with foreground trees, watchtowers, and silhouettes",
   "Night photography workflow, including focus, long exposure, deep-sky imagery, and star tracker photography (for guests who would like to use star trackers)",
   "Daylight wildlife and habitat photography: tiger, leopard, Indian gaur (bison), sloth bear, dhole (Indian wild dog), sambar, and chital (spotted deer).",
-  "Pench Tiger Reserve also hosts over 250 bird species, characterized by a diverse mix of central Indian forest residents, apex raptors, and summer breeders including the Stork-billed Kingfisher, Greater Racket-tailed Drongo, White-rumped Vulture, Indian Golden Oriole, Jungle Owlet, Plum-headed Parakeet, and the rare Brown Fish Owl along its signature river banks.",
-  "April is the best season for animal and bird encounters due to the dry conditions, especially around water sources and in open habitat at dawn and dusk.",
 ]
 
 const TADOBA_THEMES = [
@@ -28,13 +26,13 @@ const TADOBA_THEMES = [
 ]
 
 const WHAT_PHOTOGRAPH = [
-  "Star-filled landscapes in Pench, including dark-sky scenes and celestial compositions",
+  "Milky Way compositions, deep-sky objects, and star-filled landscapes in Pench",
   "Bengal tigers in Pench and Tadoba, plus a wide range of other wildlife — leopard, Indian gaur (bison), sloth bear, dhole (Indian wild dog), sambar, chital, langur, and over 300 recorded bird species across both reserves",
   "The contrast between two visual worlds: still nightscapes and dynamic wildlife action",
 ]
 
 const WHAT_LEARN = [
-  "How to plan and expose wide-field nightscapes and deep-sky astro, with Abhishek and Srini",
+  "How to plan and expose for Milky Way compositions, wide-field nightscapes, and deep-sky astro with Abhishek and Srini",
   "Techniques for focus and sharp images after dark",
   "Image stacking, noise control, and clean foreground rendering",
   "Fast-response settings for wildlife encounters and long-lens field craft from a safari vehicle, with Himanshu",
@@ -74,13 +72,21 @@ export default function Destinations() {
               className="text-base leading-relaxed mb-4"
               style={{ color: "#3D4F60" }}
             >
-              Pench Tiger Reserve became India's first Dark Sky Park in January
+              Pench National Park became India’s first Dark Sky Park in January
               2024, a recognition tied to successful efforts to reduce light
-              pollution and improve the quality of the night sky. The reserve
+              pollution and improve the quality of the night sky. The Park
               supports high-density tiger habitat and offers a dramatic natural
-              setting of forest, meadows, and open clearings that can work
-              beautifully for star trails, wide-field nightscapes, twilight
-              landscapes, and environmental wildlife imagery.
+              setting of forest, meadows, and open clearings. These can work
+              beautifully for Bengal tiger and wildlife images during the day
+              and Milky Way panoramas and vertoramas, star trails, and wide-field
+              nightscapes at night, twilight landscapes, and environmental
+              wildlife imagery. Pench Tiger Reserve also hosts over 250 bird
+              species, characterized by a diverse mix of central Indian forest
+              residents, apex raptors, and summer breeders including the
+              Stork-billed Kingfisher, Greater Racket-tailed Drongo,
+              White-rumped Vulture, Indian Golden Oriole, Jungle Owlet, and
+              Plum-headed Parakeet. April is the best season for animal and bird
+              encounters due to the dry conditions.
             </p>
 
             <p

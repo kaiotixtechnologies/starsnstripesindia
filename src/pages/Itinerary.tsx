@@ -45,7 +45,7 @@ const DAYS = [
       <>
         <p className="mb-3">
           Rest in the morning. After a relaxed morning and lunch, we leave the
-          lodge around 2:30 PM for the day's wildlife safari with Himanshu and
+          lodge around 2:30 PM for the day's wildlife photography safari with Himanshu and
           Srini into the core reserve zone, tracking tigers, leopards, bears,
           and Indian gaur, among others, along forest trails and waterholes. We
           return to the lodge by around 7 PM for dinner. We leave around 9 PM

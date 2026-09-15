@@ -37,7 +37,7 @@ const WHATS_INCLUDED: ReactNode[] = [
 
 const WHATS_NOT_INCLUDED = [
   "Flights to/from Nagpur Airport",
-  "Single room upgrade — $1,500",
+  "Single room upgrade — US$ 1,500",
   "Visa fees",
   "Health/travel insurance (strongly recommended — see booking terms)",
   "Camera gear rental (e.g., star tracker, telephoto lens)",
@@ -163,7 +163,7 @@ export default function WhatsIncluded() {
               >
                 Accommodation is in twin-share airconditioned rooms, each room
                 with a private bathroom, at jungle lodges close to the reserve
-                gates. Single occupancy is available on request for $1,500.
+                gates. Single occupancy is available on request for US$ 1,500.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -263,7 +263,7 @@ export default function WhatsIncluded() {
               Ready to review pricing and reserve?
             </p>
             <p className="text-sm text-[#637282] mb-8">
-              USD 6,900 per person · Limited to 8 photographers · USD 2,000
+              US$ 6,900 per person · Limited to 8 photographers · US$ 2,000
               deposit to secure your spot
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

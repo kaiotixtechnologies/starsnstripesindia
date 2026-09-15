@@ -35,7 +35,7 @@ const INCLUDED_SUMMARY: ReactNode[] = [
 
 const NOT_INCLUDED_SUMMARY = [
   "Flights to/from Nagpur Airport (NAG)",
-  "Single room upgrade — $1,500",
+  "Single room upgrade — US$ 1,500",
   "Visa fees (Indian e-Visa)",
   "Health and travel insurance (strongly recommended)",
   "Camera gear rental (star tracker, telephoto lens)",
@@ -43,10 +43,10 @@ const NOT_INCLUDED_SUMMARY = [
 ]
 
 const CANCELLATION_POLICY = [
-  "120+ days before tour: 10% administrative fee",
-  "90-75 days before tour: 50% cancellation fee",
-  "75-60 days before tour: 75% cancellation fee",
-  "Under 60 days or No Show: 100% cancellation fee",
+  "Before Balance Due Date: US$ 2,000 deposit forfeited; all further payments refunded in full",
+  "On or after Balance Due Date but before Nov 15, 2026: 50% of total Trip cost forfeited",
+  "On or after Nov 15, 2026: No refund (credit toward future departure may be offered at Organizers' discretion)",
+  "Spot Replacement: If a cancelled spot is refilled by a new guest, the recovered amount is refunded less a US$ 250 admin fee and non-recoverable costs",
 ]
 
 export default function Pricing() {
@@ -72,7 +72,7 @@ export default function Pricing() {
       <PageHero
         eyebrow="Expedition Investment &amp; Terms"
         title="Expedition Pricing"
-        subtitle="USD 6,900 per person (double occupancy — inaugural expedition, limited to 8 photographers)"
+        subtitle="US$ 6,900 per person (double occupancy — inaugural expedition, limited to 8 photographers)"
         bg={IMG_PRICING_HERO}
         bgPos="center 35%"
       />
@@ -104,7 +104,7 @@ export default function Pricing() {
                 Inaugural Expedition · April 5–14, 2027
               </Eyebrow>
               <h2 className="font-serif text-4xl md:text-6xl font-black text-[#C9A24B] mb-2 tracking-tight">
-                USD 6,900 per person
+                US$ 6,900 per person
               </h2>
               <p className="text-white/80 text-sm md:text-base italic mb-6">
                 (double occupancy — inaugural expedition, limited to 8
@@ -139,17 +139,18 @@ export default function Pricing() {
 
               <div className="p-4 rounded-sm bg-white/10 max-w-xl mx-auto border border-white/15 text-center">
                 <p className="text-white/95 text-sm md:text-base font-medium">
-                  Deposit: USD 2,000 — required to reserve your spot. Remaining
-                  balance of USD 4,900 due by November 1, 2026.
+                  Deposit: US$ 2,000 — required to reserve your spot. Remaining
+                  balance of US$ 4,900 due no later than 7 days after trip
+                  confirmation (by November 8, 2026).
                 </p>
                 {members > 1 && (
                   <p className="text-[#C9A24B] text-xs font-semibold mt-2">
-                    Total for {members} guests: ${totalPrice.toLocaleString()}{" "}
-                    USD (Deposit: ${totalDeposit.toLocaleString()} USD)
+                    Total for {members} guests: US$ {totalPrice.toLocaleString()}{" "}
+                    (Deposit: US$ {totalDeposit.toLocaleString()})
                   </p>
                 )}
                 <p className="text-white/60 text-xs mt-2">
-                  Single room upgrade: add $1,500 USD for single occupancy.
+                  Single room upgrade: add US$ 1,500 for single occupancy.
                 </p>
               </div>
 
@@ -284,12 +285,13 @@ export default function Pricing() {
 
               <div className="p-5 bg-white rounded-sm border border-black/[0.06]">
                 <p className="text-base font-bold text-[#7A5C1E] mb-1">
-                  A USD 2,000 deposit reserves your spot; the remaining balance
-                  is due by November 1, 2026.
+                  A US$ 2,000 deposit reserves your spot; the remaining balance
+                  is due no later than 7 days after trip confirmation (by November
+                  8, 2026).
                 </p>
                 <p className="text-xs text-[#637282]">
-                  Total tour price: USD 6,900 per person (double occupancy).
-                  Single room upgrade: add $1,500 USD for single occupancy.
+                  Total tour price: US$ 6,900 per person (double occupancy).
+                  Single room upgrade: add US$ 1,500 for single occupancy.
                 </p>
               </div>
 

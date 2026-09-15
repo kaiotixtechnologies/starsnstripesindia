@@ -25,7 +25,7 @@ const WHY_TOUR_STANDS_OUT: ReactNode[] = [
   "A rare dark-sky setting inside a tiger reserve at Pench.",
   "April 6, 2027 is new moon, guaranteeing the darkest possible skies for our four nights of astrophotography — timed to central India's dry season, historically the most reliable window for clear night skies, with the full Milky Way, including the galactic core, visible for over five hours each night.",
   "Prime dry-season timing for tiger photography in central India, when sightings around water and open habitat are at their best.",
-  "Small-group access: two co-directors present throughout the trip, joined by a specialist astrophotography expert for four nights in Pench.",
+  "Personalized attention: two co-directors present throughout the trip, joined by a specialist astrophotography expert for four nights in Pench.",
   "7 half-day safaris (four hours each: 3 in Pench, 4 in Tadoba) and 2 full-day 12-hour safaris in Tadoba totaling 52 hours of dedicated safari time, plus four dark-sky sessions (4–5 hours each) in Pench.",
   "A mix of full-day and half-day safaris in Tadoba — the same format used by leading international tiger-photography operators — designed to maximize both the volume and the diversity of sightings.",
   "Wildlife guidance from Himanshu Bagde, who has photographed over 700 individual tigers across more than two decades and tracks individual tigers by name and territory across Pench and Tadoba.",
@@ -53,7 +53,7 @@ const WHATS_INCLUDED: ReactNode[] = [
 
 const WHATS_NOT_INCLUDED = [
   "Flights to/from Nagpur Airport",
-  "Single room upgrade — $1,500",
+  "Single room upgrade — US$ 1,500",
   "Visa fees",
   "Health/travel insurance (strongly recommended — see booking terms)",
   "Camera gear rental (e.g., star tracker, telephoto lens)",
@@ -98,7 +98,7 @@ export default function Home() {
             className="hero-in eyebrow tracking-[0.2em] uppercase font-semibold text-xs md:text-sm"
             style={{ color: "#C9A24B" }}
           >
-            AN ASTROPHOTOGRAPHY + TIGER PHOTOGRAPHY EXPEDITION
+            ASTRO + TIGER PHOTOGRAPHY EXPEDITION
           </p>
 
           {/* Title */}
@@ -131,13 +131,27 @@ export default function Home() {
           </div>
 
           {/* Directors & Guide attribution */}
-          <p className="hero-in hero-in-d3 text-white/85 text-sm md:text-base max-w-3xl leading-relaxed mt-1">
-            With co-directors Himanshu Bagde (wildlife photography) and P S
-            Srinivas (“Srini”) — astrophotography and post-processing guide —
-            joined in Pench by astrophotography expert Abhishek Pawse, the
-            DarkSky International advocate behind Pench's Dark Sky Park
-            designation, for four nights of dark-sky photography
-          </p>
+          <div className="hero-in hero-in-d3 text-white/85 text-sm md:text-base max-w-3xl leading-relaxed mt-1 flex flex-col gap-3 text-center">
+            <p>
+              Co-directed by Himanshu Bagde, wildlife photography, and P S
+              Srinivas (“Srini”), astrophotography instruction and post-processing
+              coaching, throughout the trip. For four nights in Pench, they&apos;re
+              joined by astrophotography expert Abhishek Pawse — the DarkSky
+              International advocate whose work helped bring Pench its designation
+              as India&apos;s first Dark Sky Park.
+            </p>
+            <p className="text-white/80 text-xs md:text-sm">
+              In Pench, you&apos;ll do both: photograph tigers by day, then frame
+              the Milky Way and deep-sky objects across its certified dark
+              skies once night falls. From there, spend four further days going
+              all-in on tigers in Tadoba-Andhari, one of central India&apos;s
+              most tiger-dense reserves — including two full-day safaris for
+              maximum time in the field.
+            </p>
+            <p className="text-[#E8D5B5] text-xs font-medium tracking-wide">
+              Designed for photographers of all levels.
+            </p>
+          </div>
 
           {/* Group limit */}
           <div className="hero-in hero-in-d3 px-5 py-1.5 rounded-full border border-[#C9A24B]/40 bg-[#C9A24B]/10">

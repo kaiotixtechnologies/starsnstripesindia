@@ -38,7 +38,7 @@ const PAYMENTS_APPS_SCRIPT_URL =
 export default function Book() {
   const [formData, setFormData] = useState<ReservationFormData>({
     numberOfGuests: 1,
-    occupancy: "Twin-Share Room (USD 6,900)",
+    occupancy: "Twin-Share Room (US$ 6,900)",
     photographyExperience: "Intermediate",
     guests: [
       {
@@ -256,7 +256,7 @@ export default function Book() {
     email: "",
     phone: "",
     spots: 1,
-    occupancy: "Twin-Share Room (USD 6,900)",
+    occupancy: "Twin-Share Room (US$ 6,900)",
     message: "",
   })
 
@@ -587,7 +587,7 @@ ${waitlistData.name}`
       <PageHero
         eyebrow="Reserve Your Place · April 5–14, 2027"
         title="HOW TO BOOK?"
-        subtitle="This inaugural expedition is limited to 8 photographers. A USD 2,000 deposit reserves your spot; the remaining balance is due by November 1, 2026."
+        subtitle="This inaugural expedition is limited to 8 photographers. A US$ 2,000 deposit reserves your spot; the remaining balance is due no later than 7 days after trip confirmation (by November 8, 2026)."
         bg={IMG_BOOK_HERO}
       />
 
@@ -714,14 +714,15 @@ ${waitlistData.name}`
                   {!isSoldOut ? (
                     <>
                       <p className="text-xs font-semibold leading-relaxed pt-2 border-t border-black/10 text-[#7A5C1E]">
-                        A USD 2,000 deposit per guest reserves your spot; the
-                        remaining balance is due by November 1, 2026.
+                        A US$ 2,000 deposit per guest reserves your spot; the
+                        remaining balance is due no later than 7 days after trip
+                        confirmation (by November 8, 2026).
                       </p>
 
                       {formData.numberOfGuests > 1 && (
                         <p className="text-xs font-bold text-[#0D1B2A] pt-2 border-t border-black/10">
                           Selected for {formData.numberOfGuests} Guests: Total
-                          Deposit USD ${totalDeposit.toLocaleString()}
+                          Deposit US$ {totalDeposit.toLocaleString()}
                         </p>
                       )}
                     </>
@@ -1154,11 +1155,11 @@ ${waitlistData.name}`
                         (e.target.style.borderColor = "rgba(13,27,42,0.18)")
                       }
                     >
-                      <option value="Twin-Share Room (USD 6,900)">
-                        Twin-Share (USD 6,900)
+                      <option value="Twin-Share Room (US$ 6,900)">
+                        Twin-Share (US$ 6,900)
                       </option>
-                      <option value="Single Room Upgrade ($1,500 USD)">
-                        Single Room Upgrade ($1,500 USD)
+                      <option value="Single Room Upgrade (US$ 1,500)">
+                        Single Room Upgrade (US$ 1,500)
                       </option>
                     </select>
                   </div>
@@ -1284,7 +1285,7 @@ ${waitlistData.name}`
                     </p>
 
                     <span className="text-[11px] font-medium text-[#7A5C1E] bg-[#F2EDE2] px-2.5 py-0.5 rounded-full">
-                      ${depositPerGuest.toLocaleString()} USD deposit / guest
+                      US$ {depositPerGuest.toLocaleString()} deposit / guest
                     </span>
                   </div>
 
@@ -1319,8 +1320,8 @@ ${waitlistData.name}`
                           (_, i) => i + 1,
                         ).map((num) => (
                           <option key={num} value={num}>
-                            {num} {num === 1 ? "Guest" : "Guests"} (Deposit: $
-                            {(num * depositPerGuest).toLocaleString()} USD)
+                            {num} {num === 1 ? "Guest" : "Guests"} (Deposit: US${" "}
+                            {(num * depositPerGuest).toLocaleString()})
                           </option>
                         ))}
                       </select>
@@ -1349,12 +1350,12 @@ ${waitlistData.name}`
                           (e.target.style.borderColor = "rgba(13,27,42,0.18)")
                         }
                       >
-                        <option value="Twin-Share Room (USD 6,900)">
-                          Twin-Share (USD 6,900)
+                        <option value="Twin-Share Room (US$ 6,900)">
+                          Twin-Share (US$ 6,900)
                         </option>
 
-                        <option value="Single Room Upgrade ($1,500 USD)">
-                          Single Room Upgrade ($1,500 USD)
+                        <option value="Single Room Upgrade (US$ 1,500)">
+                          Single Room Upgrade (US$ 1,500)
                         </option>
                       </select>
                     </div>
@@ -1667,8 +1668,8 @@ ${waitlistData.name}`
                     </>
                   ) : (
                     <>
-                      Submit Reservation &amp; Proceed to Deposit ($
-                      {totalDeposit.toLocaleString()} USD)
+                      Submit Reservation &amp; Proceed to Deposit (US${" "}
+                      {totalDeposit.toLocaleString()})
                     </>
                   )}
                 </button>
