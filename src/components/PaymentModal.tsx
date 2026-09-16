@@ -13,7 +13,7 @@ export interface PaymentModalProps {
   onClose: () => void
   itemTitle?: string
   amountUSD?: number
-  onSuccess?: (details: { txnId: string amount: number method: string }) => void
+  onSuccess?: (details: { txnId: string; amount: number; method: string }) => void
 }
 
 export default function PaymentModal({

@@ -140,7 +140,7 @@ export default function Home() {
               International advocate whose work helped bring Pench its designation
               as India&apos;s first Dark Sky Park.
             </p>
-            <p className="text-white/80 text-xs md:text-sm">
+            <p>
               In Pench, you&apos;ll do both: photograph tigers by day, then frame
               the Milky Way and deep-sky objects across its certified dark
               skies once night falls. From there, spend four further days going

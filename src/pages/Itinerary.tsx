@@ -169,7 +169,7 @@ const DAYS = [
   },
 ]
 
-const PHASE_PILL: Record<string, { bg: string text: string }> = {
+const PHASE_PILL: Record<string, { bg: string; text: string }> = {
   Pench: { bg: "#EAF0F8", text: "#1A4080" },
   Transfer: { bg: "#FBF3E0", text: "#7A5000" },
   Tadoba: { bg: "#E8F5EE", text: "#1A5030" },

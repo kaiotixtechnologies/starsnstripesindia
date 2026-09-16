@@ -10,7 +10,7 @@ import {
   IMG_FAQ_HERO,
 } from "../components/shared"
 
-const FAQS: { category: string items: { q: string a: string }[] }[] = [
+const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
   {
     category: "Photography & Skill Level",
     items: [
