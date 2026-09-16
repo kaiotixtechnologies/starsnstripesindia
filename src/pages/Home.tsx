@@ -43,7 +43,7 @@ const WHATS_INCLUDED: ReactNode[] = [
   </span>,
   "Twin-share accommodation at Saj in the Forest Resort (Pench) and Tathastu Resort (Tadoba), each airconditioned room with a private bathroom",
   "All meals (breakfast, lunch, and dinner) throughout the stay — dietary restrictions will be accommodated",
-  "Hot beverages and snacks on all safaris; packed lunches in the park on our two full-day Tadoba safaris (April 11 AND 13)",
+  "Hot beverages and snacks on all safaris; packed lunches in the park on our two full-day Tadoba safaris (April 11 and 13)",
   "Four dedicated astrophotography sessions in Pench, including three at Pench's main dark-sky observation site",
   "Guided photo review and post-processing sessions (Lightroom/Photoshop), throughout the trip",
   "Pre-tour online planning video call with Himanshu and Srini",
