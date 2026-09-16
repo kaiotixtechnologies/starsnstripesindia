@@ -111,16 +111,12 @@ export default function Instructors() {
                 <div>
                   <div className="h-1.5 w-16 bg-[#A07828] mb-6" />
                   <h3
-                    className="font-serif text-xl font-bold mb-1"
+                    className="font-serif text-xl font-bold mb-4"
                     style={{ color: "#0D1B2A" }}
                   >
                     P S Srinivas (“Srini”) — Co-Director, Astrophotography &amp;
                     Post-Processing Guide
                   </h3>
-                  <p className="text-xs text-[#A07828] font-semibold mb-4">
-                    Visiting Research Professor, National University of
-                    Singapore
-                  </p>
                   <p
                     className="text-sm leading-relaxed"
                     style={{ color: "#4A5568" }}
