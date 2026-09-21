@@ -10,8 +10,6 @@ import { IMG_DARK_SKY } from "../assets/darkSkyData"
 
 import { IMG_TIGER_FOCUS } from "../assets/tigerData"
 
-import { IMG_KAIOTIX_LOGO } from "../assets/kaiotixData"
-
 import { IMG_INSTRUCTORS_HERO } from "../assets/instructorsHeroData"
 
 import { IMG_PRICING_HERO } from "../assets/pricingHeroData"
@@ -710,34 +708,6 @@ export function Footer() {
               <p>
                 © 2027 Stars, Stripes &amp; Wild India. All rights reserved.
               </p>
-              <div className="mt-3 flex flex-wrap items-center gap-2.5">
-                <span className="text-xs text-white/45 font-medium">
-                  Developed by
-                </span>
-                <a
-                  href="https://www.kaiotix.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded overflow-hidden shadow-sm hover:opacity-90 transition-all border border-white/20"
-                  title="Kaiotix Technologies"
-                >
-                  <img
-                    src={IMG_KAIOTIX_LOGO}
-                    alt="Kaiotix Technologies"
-                    className="h-8 sm:h-9 md:h-10 w-auto block object-cover"
-                  />
-                </a>
-                <span className="text-white/25">·</span>
-                <span className="text-xs text-white/45">
-                  Mail:{" "}
-                  <a
-                    href="mailto:sales@kaiotix.com"
-                    className="hover:underline text-[#C9A24B] font-medium transition-colors"
-                  >
-                    sales@kaiotix.com
-                  </a>
-                </span>
-              </div>
             </div>
             <div className="flex gap-6">
               <button
